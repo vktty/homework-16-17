@@ -1,0 +1,67 @@
+@use "../base/variables" as *;
+
+.header {
+    background-color: $primary-dark-blue;
+
+    &__navigation {
+        height: 92px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 191px;
+        height: 34px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 32px;
+        margin-right: 60px;
+        margin-left: auto;
+
+        &-item {}
+
+        &-link {
+            color: $white;
+        }
+    }
+
+    &__button {
+        &-login {
+            font-size: $font-size;
+            font-family: "inter";
+            font-weight: 500;
+            background-color: $secondary-yellow;
+            color: $primary-dark-blue;
+            border-radius: 8px;
+            border: none;
+            padding: 18.5px 40px;
+            margin-right: 24px;
+        }
+
+        &-try {
+            font-size: $font-size;
+            font-family: "inter";
+            font-weight: 500;
+            background-color: $primary-light-blue;
+            color: $white;
+            border-radius: 8px;
+            border: none;
+            padding: 18.5px 40px;
+            position: relative;
+
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     display: block;
+            //     background-image: url(../../images/arrow-right.svg);
+            //     width: 12px;
+            //     height: 11px;
+            //     right: 0;
+            //     bottom: 0;
+            //     transform: translate(-24px, -180%);
+            // }
+        }
+    }
+}

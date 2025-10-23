@@ -1,0 +1,87 @@
+@use "../base/variables" as *;
+
+.work-management-container {
+    padding: 140px 0;
+    .work-management {
+
+        // add bg
+        .project-management {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+
+            &__info {
+                max-width: 672px;
+                color: $black;
+            }
+
+            &__title {
+                margin-bottom: 24px;
+                background-image: url(../../images/yellow-splash.svg);
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+
+            &__description {
+                margin-bottom: 60px;
+            }
+
+            &__button {
+                font-size: $font-size;
+                font-family: "inter";
+                font-weight: 500;
+                background-color: $primary-light-blue;
+                color: $white;
+                border-radius: 8px;
+                border: none;
+                padding: 20px 40px;
+            }
+
+            &__image {
+                width: 748px;
+                height: 547px;
+                background-color: $secondary-light-blue;
+            }
+        }
+
+        .work-together {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+
+            &__image {
+                width: 710px;
+                height: 661px;
+            }
+
+            &__info {
+                max-width: 670px;
+                color: $black;
+            }
+
+            &__title {
+                margin-bottom: 24px;
+            }
+
+            &__description {
+                margin-bottom: 60px;
+                line-height: $line-height-p3;
+            }
+
+            &__button {
+                font-size: $font-size;
+                font-family: "inter";
+                font-weight: 500;
+                background-color: $primary-light-blue;
+                color: $white;
+                border-radius: 8px;
+                border: none;
+                padding: 20px 40px;
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,156 @@
+@use "../base/variables" as *;
+
+.footer-container {
+    background-color: $primary-dark-blue;
+    padding: 140px 0 32px 0;
+    .footer {
+        color: $white;
+
+        &__info {
+            margin-bottom: 38px;
+            display: flex;
+            gap: 100px;
+        }
+
+        &__whitepace {
+            max-width: 240px;
+
+            &-logo {
+                width: 191px;
+                height: 34px;
+                margin-bottom: 15px;
+            }
+
+            &-description {
+                line-height: $line-height-p2;
+            }
+        }
+
+        &__product {
+            margin-left: 65px;
+            width: 205px;
+            &-name {
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            &-list {
+                font-size: $font-size-p3;
+            }
+
+            &-item {
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-link {
+                color: $white;
+            }
+        }
+
+        &__resources {
+            width: 205px;
+            &-name {
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            &-list {
+                font-size: $font-size-p3;
+            }
+
+            &-item {
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-link {
+                color: $white;
+            }
+        }
+
+        &__company {
+            width: 205px;
+            margin-right: 100px;
+            &-name {
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            &-list {
+                font-size: $font-size-p3;
+            }
+
+            &-item {
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-link {
+                color: $white;
+            }
+        }
+
+        &__try {
+            max-width: 259px;
+            &-title {
+                margin-bottom: 23px;
+            }
+
+            &-description {
+                margin-bottom: 23px;
+                font-size: $font-size-p3;
+            }
+
+            &-button {
+                font-size: $font-size-p3;
+                line-height: $line-height-p3;
+                font-family: "inter";
+                font-weight: 500;
+                background-color: $primary-light-blue;
+                color: $white;
+                border-radius: 8px;
+                border: none;
+                padding: 20px;
+            }
+        }
+
+        &__socials {
+            padding-top: 33px;
+            display: flex;
+            justify-content: space-between;
+            font-size: $font-size-p3;
+            border-top: 1px solid $secondary-dark-blue;
+        }
+
+        &__navigation {
+            &-list {
+                display: flex;
+                gap: 60px;
+            }
+
+            &-item {}
+
+            &-link {
+                color: $white;
+            }
+        }
+
+        &__icons {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            &-link {}
+
+            &-image {}
+        }
+
+
+    }
+}

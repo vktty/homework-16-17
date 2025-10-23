@@ -1,0 +1,40 @@
+@use "../base/variables" as *;
+
+.extension-container {
+    padding: 140px 0;
+    background-color: $primary-dark-blue;
+
+    .extension {
+        display: flex;
+        align-items: center;
+
+        &__info {
+            color: $white;
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__description {
+            margin-bottom: 60px;
+        }
+
+        &__button {
+            font-size: $font-size;
+            font-family: "inter";
+            font-weight: 500;
+            background-color: $primary-light-blue;
+            color: $white;
+            border-radius: 8px;
+            border: none;
+            padding: 20px;
+        }
+
+        &__image {
+            width: 686px;
+            height: 479px;
+            background-color: $secondary-light-blue;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use "../base/variables" as *;
+.hero-container {
+    background-image: url(../../images/pattern.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 70%;
+    background-color: $primary-dark-blue;
+    padding: 140px 0;
+
+
+    .hero {
+        display: flex;
+        align-items: center;
+
+        &__info {
+            color: $white;
+            max-width: 656px;
+
+            &-title {
+                padding-bottom: 24px;
+            }
+
+            &-description {
+                line-height: 30px;
+                letter-spacing: $letter-spacing-p2;
+                padding-bottom: 60px;
+            }
+
+            &-button {
+                font-size: $font-size;
+                font-family: "inter";
+                font-weight: 400;
+                background-color: $primary-light-blue;
+                color: $white;
+                border-radius: 8px;
+                border: none;
+                padding: 20px 40px;
+            }
+        }
+
+        &__image {
+            width: 824px;
+            height: 549px;
+            background-color: $secondary-light-blue;
+        }
+    }
+}

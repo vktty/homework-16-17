@@ -1,0 +1,85 @@
+@use "../base/variables" as *;
+
+.pricing-container {
+    padding: 140px 0;
+
+    .pricing {
+        text-align: center;
+
+        &__info {
+            color: $black;
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__description {
+            margin-inline: auto;
+            margin-bottom: 60px;
+            line-height: $line-height-p2;
+            width: 979px;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        &__block {}
+
+        &__card {
+            padding: 40px 44px;
+            border: 1px solid $secondary-yellow;
+            border-radius: 10px;
+            color: $black;
+            text-align: left;
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-bottom: 25px;
+            }
+
+            &-name {
+                font-weight: 600;
+            }
+
+            &-title {}
+
+            &-description {
+                font-weight: 500;
+            }
+        }
+
+        &__point {
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+                margin-bottom: 25px;
+                align-items: start;
+                font-size: $font-size-p3;
+                line-height: $line-height-p3;
+
+                &__item {}
+
+                &__link {
+                    color: $black;
+                }
+            }
+        }
+
+        &__button {
+            font-size: $font-size;
+            font-family: "inter";
+            font-weight: 400;
+            color: $black;
+            border-radius: 8px;
+            border: 1px solid $secondary-yellow;
+            padding: 16px 40px;
+        }
+    }
+}

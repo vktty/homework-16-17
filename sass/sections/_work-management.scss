@@ -28,14 +28,6 @@
             }
 
             &__button {
-                font-size: $font-size;
-                font-family: "inter";
-                font-weight: 500;
-                background-color: $primary-light-blue;
-                color: $white;
-                border-radius: 8px;
-                border: none;
-                padding: 20px 40px;
             }
 
             &__image {
@@ -51,8 +43,7 @@
             gap: 100px;
 
             &__image {
-                width: 710px;
-                height: 661px;
+                max-width: 710px;
             }
 
             &__info {
@@ -70,14 +61,6 @@
             }
 
             &__button {
-                font-size: $font-size;
-                font-family: "inter";
-                font-weight: 500;
-                background-color: $primary-light-blue;
-                color: $white;
-                border-radius: 8px;
-                border: none;
-                padding: 20px 40px;
             }
         }
 

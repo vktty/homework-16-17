@@ -6,9 +6,11 @@
 
     .extension {
         display: flex;
+        gap: 98px;
         align-items: center;
 
         &__info {
+            max-width: 697px;
             color: $white;
         }
 
@@ -21,18 +23,10 @@
         }
 
         &__button {
-            font-size: $font-size;
-            font-family: "inter";
-            font-weight: 500;
-            background-color: $primary-light-blue;
-            color: $white;
-            border-radius: 8px;
-            border: none;
-            padding: 20px;
         }
 
         &__image {
-            width: 686px;
+            min-width: 686px;
             height: 479px;
             background-color: $secondary-light-blue;
         }

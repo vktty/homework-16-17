@@ -24,6 +24,7 @@
         &__list {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 32px;
         }
 
@@ -65,21 +66,39 @@
                 line-height: $line-height-p3;
 
                 &__item {}
-
-                &__link {
-                    color: $black;
-                }
             }
         }
 
         &__button {
-            font-size: $font-size;
-            font-family: "inter";
-            font-weight: 400;
-            color: $black;
-            border-radius: 8px;
-            border: 1px solid $secondary-yellow;
-            padding: 16px 40px;
         }
+    }
+}
+
+.pricing {
+    &__block &__card--active {
+        background-color: $primary-dark-blue;
+        border: none;
+        padding: 80px 44px;
+    }
+    &__card--active &__card-name {
+        line-height: $line-height-p1;
+    }
+
+    &__card--active &__card-title {
+        color: $secondary-yellow;
+    }
+
+    &__card--active &__card-info,
+    &__card--active &__point {
+        color: $white;
+    }
+
+    &__card--active &__point-list__item {
+        font-weight: 500;
+    }
+
+    &__card--active &__button {
+        color: $white;
+        border: none;
     }
 }

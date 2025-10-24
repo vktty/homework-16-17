@@ -1,0 +1,60 @@
+@use "../base/variables" as *;
+
+.button {
+    font-size: $font-size;
+    font-family: "inter";
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+
+    &--yellow {
+        background-color: $secondary-yellow;
+        color: $primary-dark-blue;
+    }
+
+    &--blue {
+        background-color: $primary-light-blue;
+        color: $white;
+    }
+
+    &--white {
+        color: $black;
+        border: 1px solid $secondary-yellow;
+    }
+
+    &--xs {
+        padding: 18.5px 24px
+    }
+
+    &--small {
+        padding: 16px 40px;
+    }
+
+    &--medium {
+        padding: 18.5px 40px;
+    }
+
+    &--big {
+        padding: 20px;
+    }
+
+    &--huge {
+        padding: 20px 40px;
+    }
+
+    &--arrow-right {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+        &::after {
+                content: "";
+                // position: absolute;
+                display: block;
+                background-image: url(../../images/arrow-right.svg);
+                width: 12px;
+                height: 11px;
+
+        }
+    }
+}

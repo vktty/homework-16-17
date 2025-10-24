@@ -23,45 +23,31 @@
         &-item {}
 
         &-link {
+            position: relative;
+            padding-right: 30px;
             color: $white;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url(../../images/arrow-down.svg);
+                background-repeat: no-repeat;
+                top: 50%;
+                right: 0;
+                height: 24px;
+                width: 24px;
+                transform: translate(30%, 0);
+            }
         }
     }
 
     &__button {
-        &-login {
-            font-size: $font-size;
-            font-family: "inter";
-            font-weight: 500;
-            background-color: $secondary-yellow;
-            color: $primary-dark-blue;
-            border-radius: 8px;
-            border: none;
-            padding: 18.5px 40px;
-            margin-right: 24px;
-        }
+
+        display: flex;
+        gap: 24px;
+        &-login {}
 
         &-try {
-            font-size: $font-size;
-            font-family: "inter";
-            font-weight: 500;
-            background-color: $primary-light-blue;
-            color: $white;
-            border-radius: 8px;
-            border: none;
-            padding: 18.5px 40px;
-            position: relative;
-
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     display: block;
-            //     background-image: url(../../images/arrow-right.svg);
-            //     width: 12px;
-            //     height: 11px;
-            //     right: 0;
-            //     bottom: 0;
-            //     transform: translate(-24px, -180%);
-            // }
         }
     }
 }

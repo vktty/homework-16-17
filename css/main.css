@@ -50,26 +50,75 @@ button {
 @font-face {
   font-family: "inter";
   font-weight: 400;
-  src: url("../../fonts/inter/regular/Inter_Regular.eot"), url("../../fonts/inter/regular/Inter_Regular.otf") format("opentype"), url("../../fonts/inter/regular/Inter_Regular.ttf") format("truetype"), url("../../fonts/inter/regular/Inter_Regular.woff") format("woff"), url("../../fonts/inter/regular/Inter_Regular.woff2") format("woff2");
+  src: url("../../fonts/inter/regular/Inter-Regular.eot"), url("../../fonts/inter/regular/Inter-Regular.otf") format("opentype"), url("../../fonts/inter/regular/Inter-Regular.ttf") format("truetype"), url("../../fonts/inter/regular/Inter-Regular.woff") format("woff"), url("../../fonts/inter/regular/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 500;
-  src: url("../../fonts/inter/medium/Inter_Medium.eot"), url("../../fonts/inter/medium/Inter_Medium.otf") format("opentype"), url("../../fonts/inter/medium/Inter_Medium.ttf") format("truetype"), url("../../fonts/inter/medium/Inter_Medium.woff") format("woff"), url("../../fonts/inter/medium/Inter_Medium.woff2") format("woff2");
+  src: url("../../fonts/inter/medium/Inter-Medium.eot"), url("../../fonts/inter/medium/Inter-Medium.otf") format("opentype"), url("../../fonts/inter/medium/Inter-Medium.ttf") format("truetype"), url("../../fonts/inter/medium/Inter-Medium.woff") format("woff"), url("../../fonts/inter/medium/Inter-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 600;
-  src: url("../../fonts/inter/semibold/Inter_SemiBold.eot"), url("../../fonts/inter/semibold/Inter_SemiBold.otf") format("opentype"), url("../../fonts/inter/semibold/Inter_SemiBold.ttf") format("truetype"), url("../../fonts/inter/semibold/Inter_SemiBold.woff") format("woff"), url("../../fonts/inter/semibold/Inter_SemiBold.woff2") format("woff2");
+  src: url("../../fonts/inter/semibold/Inter-SemiBold.eot"), url("../../fonts/inter/semibold/Inter-SemiBold.otf") format("opentype"), url("../../fonts/inter/semibold/Inter-SemiBold.ttf") format("truetype"), url("../../fonts/inter/semibold/Inter-SemiBold.woff") format("woff"), url("../../fonts/inter/semibold/Inter-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 700;
-  src: url("../../fonts/inter/bold/Inter_Bold.eot"), url("../../fonts/inter/bold/Inter_Bold.otf") format("opentype"), url("../../fonts/inter/bold/Inter_Bold.ttf") format("truetype"), url("../../fonts/inter/bold/Inter_Bold.woff") format("woff"), url("../../fonts/inter/bold/Inter_Bold.woff2") format("woff2");
+  src: url("../../fonts/inter/bold/Inter-Bold.eot"), url("../../fonts/inter/bold/Inter-Bold.otf") format("opentype"), url("../../fonts/inter/bold/Inter-Bold.ttf") format("truetype"), url("../../fonts/inter/bold/Inter-Bold.woff") format("woff"), url("../../fonts/inter/bold/Inter-Bold.woff2") format("woff2");
 }
+.button {
+  font-size: 18px;
+  font-family: "inter";
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+}
+.button--yellow {
+  background-color: #FFE492;
+  color: #043873;
+}
+.button--blue {
+  background-color: #4F9CF9;
+  color: #ffffff;
+}
+.button--white {
+  color: #212529;
+  border: 1px solid #FFE492;
+}
+.button--xs {
+  padding: 18.5px 24px;
+}
+.button--small {
+  padding: 16px 40px;
+}
+.button--medium {
+  padding: 18.5px 40px;
+}
+.button--big {
+  padding: 20px;
+}
+.button--huge {
+  padding: 20px 40px;
+}
+.button--arrow-right {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.button--arrow-right::after {
+  content: "";
+  display: block;
+  background-image: url(../../images/arrow-right.svg);
+  width: 12px;
+  height: 11px;
+}
+
 .container {
   max-width: 1480px;
   margin-inline: auto;
+  padding: 0 32px;
 }
 
 .header {
@@ -91,31 +140,25 @@ button {
   margin-left: auto;
 }
 .header__list-link {
-  color: #ffffff;
-}
-.header__button-login {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 500;
-  background-color: #FFE492;
-  color: #043873;
-  border-radius: 8px;
-  border: none;
-  padding: 18.5px 40px;
-  margin-right: 24px;
-}
-.header__button-try {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 500;
-  background-color: #4F9CF9;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  padding: 18.5px 40px;
   position: relative;
+  padding-right: 30px;
+  color: #ffffff;
 }
-
+.header__list-link::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../images/arrow-down.svg);
+  background-repeat: no-repeat;
+  top: 50%;
+  right: 0;
+  height: 24px;
+  width: 24px;
+  transform: translate(30%, 0);
+}
+.header__button {
+  display: flex;
+  gap: 24px;
+}
 .hero-container {
   background-image: url(../../images/pattern.svg);
   background-repeat: no-repeat;
@@ -139,16 +182,6 @@ button {
   line-height: 30px;
   letter-spacing: -0.02rem;
   padding-bottom: 60px;
-}
-.hero-container .hero__info-button {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 400;
-  background-color: #4F9CF9;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  padding: 20px 40px;
 }
 .hero-container .hero__image {
   width: 824px;
@@ -178,16 +211,6 @@ button {
 .work-management-container .work-management .project-management__description {
   margin-bottom: 60px;
 }
-.work-management-container .work-management .project-management__button {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 500;
-  background-color: #4F9CF9;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  padding: 20px 40px;
-}
 .work-management-container .work-management .project-management__image {
   width: 748px;
   height: 547px;
@@ -199,8 +222,7 @@ button {
   gap: 100px;
 }
 .work-management-container .work-management .work-together__image {
-  width: 710px;
-  height: 661px;
+  max-width: 710px;
 }
 .work-management-container .work-management .work-together__info {
   max-width: 670px;
@@ -213,26 +235,17 @@ button {
   margin-bottom: 60px;
   line-height: 1.1111111111rem;
 }
-.work-management-container .work-management .work-together__button {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 500;
-  background-color: #4F9CF9;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  padding: 20px 40px;
-}
-
 .extension-container {
   padding: 140px 0;
   background-color: #043873;
 }
 .extension-container .extension {
   display: flex;
+  gap: 98px;
   align-items: center;
 }
 .extension-container .extension__info {
+  max-width: 697px;
   color: #ffffff;
 }
 .extension-container .extension__title {
@@ -241,18 +254,8 @@ button {
 .extension-container .extension__description {
   margin-bottom: 60px;
 }
-.extension-container .extension__button {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 500;
-  background-color: #4F9CF9;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  padding: 20px;
-}
 .extension-container .extension__image {
-  width: 686px;
+  min-width: 686px;
   height: 479px;
   background-color: #A7CEFC;
 }
@@ -278,6 +281,7 @@ button {
 .pricing-container .pricing__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 32px;
 }
 .pricing-container .pricing__card {
@@ -308,17 +312,26 @@ button {
   font-size: 0.8888888889rem;
   line-height: 1.1111111111rem;
 }
-.pricing-container .pricing__point-list__link {
-  color: #212529;
+.pricing__block .pricing__card--active {
+  background-color: #043873;
+  border: none;
+  padding: 80px 44px;
 }
-.pricing-container .pricing__button {
-  font-size: 18px;
-  font-family: "inter";
-  font-weight: 400;
-  color: #212529;
-  border-radius: 8px;
-  border: 1px solid #FFE492;
-  padding: 16px 40px;
+.pricing__card--active .pricing__card-name {
+  line-height: 2rem;
+}
+.pricing__card--active .pricing__card-title {
+  color: #FFE492;
+}
+.pricing__card--active .pricing__card-info, .pricing__card--active .pricing__point {
+  color: #ffffff;
+}
+.pricing__card--active .pricing__point-list__item {
+  font-weight: 500;
+}
+.pricing__card--active .pricing__button {
+  color: #ffffff;
+  border: none;
 }
 
 .footer-container {
@@ -416,13 +429,6 @@ button {
 .footer-container .footer__try-button {
   font-size: 0.8888888889rem;
   line-height: 1.1111111111rem;
-  font-family: "inter";
-  font-weight: 500;
-  background-color: #4F9CF9;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  padding: 20px;
 }
 .footer-container .footer__socials {
   padding-top: 33px;
@@ -434,6 +440,33 @@ button {
 .footer-container .footer__navigation-list {
   display: flex;
   gap: 60px;
+}
+.footer-container .footer__navigation-item:first-child {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 25px;
+}
+.footer-container .footer__navigation-item:first-child::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../images/globus.svg);
+  background-repeat: no-repeat;
+  top: 0;
+  right: 85%;
+  height: 24px;
+  width: 24px;
+  transform: translate(30%, -5%);
+}
+.footer-container .footer__navigation-item:first-child::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../images/arrow-down.svg);
+  background-repeat: no-repeat;
+  top: 50%;
+  right: 0;
+  height: 24px;
+  width: 24px;
+  transform: translate(30%, -5%);
 }
 .footer-container .footer__navigation-link {
   color: #ffffff;

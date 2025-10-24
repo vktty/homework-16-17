@@ -3,6 +3,7 @@
 .footer-container {
     background-color: $primary-dark-blue;
     padding: 140px 0 32px 0;
+
     .footer {
         color: $white;
 
@@ -29,6 +30,7 @@
         &__product {
             margin-left: 65px;
             width: 205px;
+
             &-name {
                 font-weight: 700;
                 margin-bottom: 16px;
@@ -40,6 +42,7 @@
 
             &-item {
                 margin-bottom: 16px;
+
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -52,6 +55,7 @@
 
         &__resources {
             width: 205px;
+
             &-name {
                 font-weight: 700;
                 margin-bottom: 16px;
@@ -63,6 +67,7 @@
 
             &-item {
                 margin-bottom: 16px;
+
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -76,6 +81,7 @@
         &__company {
             width: 205px;
             margin-right: 100px;
+
             &-name {
                 font-weight: 700;
                 margin-bottom: 16px;
@@ -87,6 +93,7 @@
 
             &-item {
                 margin-bottom: 16px;
+
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -99,6 +106,7 @@
 
         &__try {
             max-width: 259px;
+
             &-title {
                 margin-bottom: 23px;
             }
@@ -111,13 +119,7 @@
             &-button {
                 font-size: $font-size-p3;
                 line-height: $line-height-p3;
-                font-family: "inter";
-                font-weight: 500;
-                background-color: $primary-light-blue;
-                color: $white;
-                border-radius: 8px;
-                border: none;
-                padding: 20px;
+
             }
         }
 
@@ -135,10 +137,40 @@
                 gap: 60px;
             }
 
-            &-item {}
+            &-item {
+                &:first-child {
+                    position: relative;
+                    padding-right: 30px;
+                    padding-left: 25px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        background-image: url(../../images/globus.svg);
+                        background-repeat: no-repeat;
+                        top: 0;
+                        right: 85%;
+                        height: 24px;
+                        width: 24px;
+                        transform: translate(30%, -5%);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-image: url(../../images/arrow-down.svg);
+                        background-repeat: no-repeat;
+                        top: 50%;
+                        right: 0;
+                        height: 24px;
+                        width: 24px;
+                        transform: translate(30%, -5%);
+                    }
+                }
+            }
 
             &-link {
                 color: $white;
+                
             }
         }
 
@@ -146,6 +178,7 @@
             display: flex;
             align-items: center;
             gap: 32px;
+
             &-link {}
 
             &-image {}

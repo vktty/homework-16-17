@@ -346,8 +346,26 @@ button {
 }
 .work-management-container {
   padding: 140px 0;
+  position: relative;
+  z-index: 2;
+}
+.work-management-container ::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/fingerprint.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0;
+  right: 65%;
+  width: 800px;
+  height: 450px;
+  transform: translate(10%, 65%);
+  opacity: 0.2;
+  z-index: -1;
 }
 .work-management-container .work-management .project-management {
+  max-height: 547px;
   display: flex;
   align-items: center;
   gap: 60px;
@@ -418,6 +436,115 @@ button {
 .work-management-container .work-management .work-together__description {
   margin-bottom: 60px;
   line-height: 1.1111111111rem;
+}
+@media screen and (max-width: 1050px) {
+  .work-management-container {
+    background-image: url("../../images/fingerprint.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -15% 20%;
+    background-size: 30%;
+    position: unset;
+  }
+  .work-management-container::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work-management-container {
+    padding: 100px 0;
+  }
+  .work-management-container .work-management .project-management {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  .work-management-container .work-management .project-management__info {
+    text-align: center;
+  }
+  .work-management-container .work-management .project-management__title {
+    font-size: 3rem;
+  }
+  .work-management-container .work-management .project-management__title::after {
+    content: "";
+    position: absolute;
+    width: 530px;
+    height: 80px;
+    bottom: 0;
+    left: 38%;
+    transform: translate(0, 40px);
+    z-index: -1;
+  }
+  .work-management-container .work-management .project-management__button {
+    margin-inline: auto;
+  }
+  .work-management-container .work-management .project-management__image {
+    margin-inline: auto;
+    width: 561px;
+    height: 349px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .work-management-container .work-management .project-management__title::after {
+    content: "";
+    position: absolute;
+    width: 530px;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    transform: translate(70px, 40px);
+  }
+}
+@media screen and (max-width: 460px) {
+  .work-management-container .work-management .project-management__title {
+    font-size: 2.5rem;
+  }
+  .work-management-container .work-management .project-management__title::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 80px;
+    bottom: 0;
+    left: 25px;
+    transform: translate(0, 43px);
+  }
+}
+@media screen and (max-width: 380px) {
+  .work-management-container {
+    padding: 80px 0;
+  }
+  .work-management-container .work-management .project-management__title {
+    font-size: 2rem;
+  }
+  .work-management-container .work-management .project-management__title::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 80px;
+    bottom: 0;
+    left: 40px;
+    transform: translate(0, 54px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .work-management-container {
+    padding: 80px 0;
+  }
+  .work-management-container .work-management .project-management__title {
+    font-size: 2rem;
+  }
+  .work-management-container .work-management .project-management__title::after {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 80px;
+    bottom: 0;
+    left: 25px;
+    transform: translate(0, 54px);
+  }
+  .work-management-container .work-management .project-management__image {
+    width: 286px;
+    height: 177px;
+  }
 }
 .extension-container {
   padding: 140px 0;

@@ -51,7 +51,11 @@ $letter-spacing-p3: $letter-spacing;
 $breakpoints: (
     xs: 0,
     sm: 320px,
+    custom-380: 380px,
+    custom-460: 460px,
+    custom-576: 576px,
     md: 768px,
+    custom-1050: 1050px,
     lg: 1152px,
     custom-1220: 1220px,
     custom-1435: 1435px,

@@ -145,7 +145,7 @@
                     &::before{
                         content: "";
                         position: absolute;
-                        background-image: url(../../images/globus.svg);
+                        background-image: url("../../images/globus.svg");
                         background-repeat: no-repeat;
                         top: 0;
                         right: 85%;
@@ -157,7 +157,7 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        background-image: url(../../images/arrow-down.svg);
+                        background-image: url("../../images/arrow-down.svg");
                         background-repeat: no-repeat;
                         top: 50%;
                         right: 0;

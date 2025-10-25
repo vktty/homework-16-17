@@ -1,6 +1,6 @@
 @use "../base/variables" as *;
 .hero-container {
-    background-image: url(../../images/pattern.svg);
+    background-image: url("../../images/pattern.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center 70%;

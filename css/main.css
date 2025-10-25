@@ -250,6 +250,22 @@ button {
 }
 .extension-container .extension__title {
   margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+.extension-container .extension__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../../images/yellow-splash.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 48px;
+  bottom: 0;
+  left: 0;
+  transform: translate(250px, 8px);
+  z-index: -1;
 }
 .extension-container .extension__description {
   margin-bottom: 60px;

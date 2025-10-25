@@ -1,4 +1,6 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
+
 .hero-container {
     background-image: url("../../images/pattern.svg");
     background-repeat: no-repeat;
@@ -25,15 +27,111 @@
                 letter-spacing: $letter-spacing-p2;
                 padding-bottom: 60px;
             }
+        }
 
-            &-button {
-            }
+        &__button-taskey {
+            display: none;
         }
 
         &__image {
             width: 824px;
             height: 549px;
             background-color: $secondary-light-blue;
+        }
+    }
+}
+
+@include media-down(lg) {
+    .hero-container {
+        .hero {
+            &__info {
+                max-width: 691px;
+            }
+
+            &__image {
+                max-width: 685px;
+                height: 456px;
+            }
+        }
+    }
+}
+
+@include media-down(md) {
+    .hero-container {
+        background-image: url("../../images/pattern-md.svg");
+        background-position: 40% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .hero {
+            flex-wrap: wrap;
+            gap: 100px;
+
+            &__info {
+                text-align: center;
+
+                &-title {
+                    font-size: 3rem;
+                }
+            }
+
+            &__button-try {
+                margin-inline: auto;
+                padding: 20px 40px;
+            }
+
+            &__image {
+                margin-inline: auto;
+                max-width: 551px;
+                height: 368px;
+            }
+        }
+    }
+}
+
+@include media-down(sm) {
+    .hero-container {
+        background-image: none;
+        position: relative; 
+        overflow: hidden;
+        z-index: 1;
+        ::before {
+            content: "";
+            position: absolute;
+            background-image: url("../../images/pattern.svg");
+            top: 0;
+            right: 0;
+            width: 1485px;
+            height: 690px;
+            transform: translate(-20%, 30%);
+            rotate: (-160deg);
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .hero {
+            &__info {
+                &-title {
+                    font-size: 2rem;
+                }
+            }
+
+            &__image {
+                max-width: 268px;
+                height: 191px;
+            }
+
+            &__button-try {
+                display: none;
+            }
+
+            &__button-taskey {
+                text-align: left;
+                display: block;
+                max-width: 232px;
+                margin-inline: auto;
+                font-weight: 400;
+                line-height: $line-height-p2;
+            }
         }
     }
 }

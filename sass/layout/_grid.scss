@@ -1,5 +1,33 @@
+@use "../base/mixins" as *;
+
 .container {
     max-width: 1480px;
     margin-inline: auto;
-    padding: 0 32px ;
+    padding: 0 32px;
 }
+@include media-down(md) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@include media-down(sm) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+// @include media-down(md) {
+//     .hero {
+
+//     }
+// }
+
+// xs: 0,
+// sm: 320px,
+// md: 768px,
+// lg: 1152px,
+// custom-1220,
+// custom-1435: 1435px,
+// xl: 1440px,
+// xxl: 1920px

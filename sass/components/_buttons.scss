@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .button {
     font-size: $font-size;
@@ -53,7 +54,22 @@
                 background-image: url("../../images/arrow-right.svg");
                 width: 12px;
                 height: 11px;
+        }
+    }
+}
 
+@include media-down(sm) {
+    .button {
+        &--arrow-right {
+            gap: 10px;
+            &::after {
+                    content: "";
+                    display: inline-block;
+                    background-image: url("../../images/arrow-right.svg");
+                    width: 12px;
+                    height: 11px;
+                    margin-left: 5px;
+            }
         }
     }
 }

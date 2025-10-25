@@ -115,12 +115,35 @@ button {
   height: 11px;
 }
 
+@media screen and (max-width: 320px) {
+  .button--arrow-right {
+    gap: 10px;
+  }
+  .button--arrow-right::after {
+    content: "";
+    display: inline-block;
+    background-image: url("../../images/arrow-right.svg");
+    width: 12px;
+    height: 11px;
+    margin-left: 5px;
+  }
+}
 .container {
   max-width: 1480px;
   margin-inline: auto;
   padding: 0 32px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 15px;
+  }
+}
 .header {
   background-color: #043873;
 }
@@ -237,12 +260,90 @@ button {
   letter-spacing: -0.02rem;
   padding-bottom: 60px;
 }
+.hero-container .hero__button-taskey {
+  display: none;
+}
 .hero-container .hero__image {
   width: 824px;
   height: 549px;
   background-color: #A7CEFC;
 }
 
+@media screen and (max-width: 1152px) {
+  .hero-container .hero__info {
+    max-width: 691px;
+  }
+  .hero-container .hero__image {
+    max-width: 685px;
+    height: 456px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-container {
+    background-image: url("../../images/pattern-md.svg");
+    background-position: 40% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero-container .hero {
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  .hero-container .hero__info {
+    text-align: center;
+  }
+  .hero-container .hero__info-title {
+    font-size: 3rem;
+  }
+  .hero-container .hero__button-try {
+    margin-inline: auto;
+    padding: 20px 40px;
+  }
+  .hero-container .hero__image {
+    margin-inline: auto;
+    max-width: 551px;
+    height: 368px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hero-container {
+    background-image: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .hero-container ::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../images/pattern.svg");
+    top: 0;
+    right: 0;
+    width: 1485px;
+    height: 690px;
+    transform: translate(-20%, 30%);
+    rotate: -160deg;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  .hero-container .hero__info-title {
+    font-size: 2rem;
+  }
+  .hero-container .hero__image {
+    max-width: 268px;
+    height: 191px;
+  }
+  .hero-container .hero__button-try {
+    display: none;
+  }
+  .hero-container .hero__button-taskey {
+    text-align: left;
+    display: block;
+    max-width: 232px;
+    margin-inline: auto;
+    font-weight: 400;
+    line-height: 1.6666666667rem;
+  }
+}
 .work-management-container {
   padding: 140px 0;
 }

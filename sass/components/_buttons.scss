@@ -49,9 +49,8 @@
         gap: 10px;
         &::after {
                 content: "";
-                // position: absolute;
                 display: block;
-                background-image: url(../../images/arrow-right.svg);
+                background-image: url("../../images/arrow-right.svg");
                 width: 12px;
                 height: 11px;
 

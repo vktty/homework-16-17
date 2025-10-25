@@ -12,6 +12,23 @@
 
         &__title {
             margin-bottom: 24px;
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                background-image: url("../../images/yellow-splash.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 480px;
+                height: 50px;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-10px, 5px);
+                z-index: -1;
+            }
         }
 
         &__description {

@@ -47,3 +47,14 @@ $letter-spacing-h5: $letter-spacing;
 $letter-spacing-p1: 0;
 $letter-spacing-p2: $letter-spacing; 
 $letter-spacing-p3: $letter-spacing;
+
+$breakpoints: (
+    xs: 0,
+    sm: 320px,
+    md: 768px,
+    lg: 1152px,
+    custom-1220: 1220px,
+    custom-1435: 1435px,
+    xl: 1440px,
+    xxl: 1920px
+)

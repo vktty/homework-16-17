@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "./variables" as *;
+
+@mixin media-down($name) {
+    $value: map.get($breakpoints, $name);
+
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}

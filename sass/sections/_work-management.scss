@@ -18,9 +18,23 @@
 
             &__title {
                 margin-bottom: 24px;
-                background-image: url("../../images/yellow-splash.svg");
-                background-repeat: no-repeat;
-                background-position: bottom;
+                position: relative;
+                z-index: 2;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    background-image: url("../../images/yellow-splash.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 690px;
+                    height: 80px;
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(0, 25px);
+                    z-index: -1;
+                }
             }
 
             &__description {
@@ -53,6 +67,23 @@
 
             &__title {
                 margin-bottom: 24px;
+                position: relative;
+                z-index: 2;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    background-image: url("../../images/yellow-splash.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 500px;
+                    height: 45px;
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(200px, 5px);
+                    z-index: -1;
+                }
             }
 
             &__description {

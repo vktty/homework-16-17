@@ -50,22 +50,22 @@ button {
 @font-face {
   font-family: "inter";
   font-weight: 400;
-  src: url("../../../fonts/inter/regular/Inter-Regular.eot"), url("../../../fonts/inter/regular/Inter-Regular.otf") format("opentype"), url("../../../fonts/inter/regular/Inter-Regular.ttf") format("truetype"), url("../../../fonts/inter/regular/Inter-Regular.woff") format("woff"), url("../../../fonts/inter/regular/Inter-Regular.woff2") format("woff2");
+  src: url("../../fonts/inter/regular/Inter-Regular.eot"), url("../../fonts/inter/regular/Inter-Regular.otf") format("opentype"), url("../../fonts/inter/regular/Inter-Regular.ttf") format("truetype"), url("../../fonts/inter/regular/Inter-Regular.woff") format("woff"), url("../../fonts/inter/regular/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 500;
-  src: url("../../../fonts/inter/medium/Inter-Medium.eot"), url("../../../fonts/inter/medium/Inter-Medium.otf") format("opentype"), url("../../../fonts/inter/medium/Inter-Medium.ttf") format("truetype"), url("../../../fonts/inter/medium/Inter-Medium.woff") format("woff"), url("../../../fonts/inter/medium/Inter-Medium.woff2") format("woff2");
+  src: url("../../fonts/inter/medium/Inter-Medium.eot"), url("../../fonts/inter/medium/Inter-Medium.otf") format("opentype"), url("../../fonts/inter/medium/Inter-Medium.ttf") format("truetype"), url("../../fonts/inter/medium/Inter-Medium.woff") format("woff"), url("../../fonts/inter/medium/Inter-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 600;
-  src: url("../../../fonts/inter/semibold/Inter-SemiBold.eot"), url("../../../fonts/inter/semibold/Inter-SemiBold.otf") format("opentype"), url("../../../fonts/inter/semibold/Inter-SemiBold.ttf") format("truetype"), url("../../../fonts/inter/semibold/Inter-SemiBold.woff") format("woff"), url("../../../fonts/inter/semibold/Inter-SemiBold.woff2") format("woff2");
+  src: url("../../fonts/inter/semibold/Inter-SemiBold.eot"), url("../../fonts/inter/semibold/Inter-SemiBold.otf") format("opentype"), url("../../fonts/inter/semibold/Inter-SemiBold.ttf") format("truetype"), url("../../fonts/inter/semibold/Inter-SemiBold.woff") format("woff"), url("../../fonts/inter/semibold/Inter-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 700;
-  src: url("../../../fonts/inter/bold/Inter-Bold.eot"), url("../../../fonts/inter/bold/Inter-Bold.otf") format("opentype"), url("../../../fonts/inter/bold/Inter-Bold.ttf") format("truetype"), url("../../../fonts/inter/bold/Inter-Bold.woff") format("woff"), url("../../../fonts/inter/bold/Inter-Bold.woff2") format("woff2");
+  src: url("../../fonts/inter/bold/Inter-Bold.eot"), url("../../fonts/inter/bold/Inter-Bold.otf") format("opentype"), url("../../fonts/inter/bold/Inter-Bold.ttf") format("truetype"), url("../../fonts/inter/bold/Inter-Bold.woff") format("woff"), url("../../fonts/inter/bold/Inter-Bold.woff2") format("woff2");
 }
 .button {
   font-size: 18px;
@@ -110,7 +110,7 @@ button {
 .button--arrow-right::after {
   content: "";
   display: block;
-  background-image: url(../../images/arrow-right.svg);
+  background-image: url("../../images/arrow-right.svg");
   width: 12px;
   height: 11px;
 }
@@ -132,12 +132,12 @@ button {
 .header__logo {
   width: 191px;
   height: 34px;
+  margin-right: auto;
 }
 .header__list {
   display: flex;
   gap: 32px;
   margin-right: 60px;
-  margin-left: auto;
 }
 .header__list-link {
   position: relative;
@@ -147,7 +147,7 @@ button {
 .header__list-link::after {
   content: "";
   position: absolute;
-  background-image: url(../../images/arrow-down.svg);
+  background-image: url("../../images/arrow-down.svg");
   background-repeat: no-repeat;
   top: 50%;
   right: 0;
@@ -159,8 +159,62 @@ button {
   display: flex;
   gap: 24px;
 }
+.header__menu {
+  display: none;
+}
+.header__checkbox {
+  display: none;
+}
+.header__burger {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 42px;
+  height: 30px;
+}
+.header__burger-line {
+  width: 42px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+}
+.header__burger-line:nth-child(1), .header__burger-line:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+@media screen and (max-width: 1220px) {
+  .header__navigation {
+    gap: 20px;
+  }
+  .header__list {
+    display: none;
+  }
+  .header__menu {
+    display: block;
+  }
+  .header__burger {
+    display: flex;
+  }
+  #burger-checkbox:checked + .header__burger + .header__list {
+    display: flex;
+  }
+  #burger-checkbox:checked + .header__burger > .header__burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 10px);
+  }
+  #burger-checkbox:checked + .header__burger > .header__burger-line:nth-child(2) {
+    transform: scale(0);
+  }
+  #burger-checkbox:checked + .header__burger > .header__burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -10px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
 .hero-container {
-  background-image: url(../../images/pattern.svg);
+  background-image: url("../../images/pattern.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center 70%;
@@ -204,9 +258,22 @@ button {
 }
 .work-management-container .work-management .project-management__title {
   margin-bottom: 24px;
-  background-image: url(../../images/yellow-splash.svg);
+  position: relative;
+  z-index: 2;
+}
+.work-management-container .work-management .project-management__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/yellow-splash.svg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-size: contain;
+  width: 690px;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 25px);
+  z-index: -1;
 }
 .work-management-container .work-management .project-management__description {
   margin-bottom: 60px;
@@ -230,6 +297,22 @@ button {
 }
 .work-management-container .work-management .work-together__title {
   margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+.work-management-container .work-management .work-together__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/yellow-splash.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 45px;
+  bottom: 0;
+  left: 0;
+  transform: translate(200px, 5px);
+  z-index: -1;
 }
 .work-management-container .work-management .work-together__description {
   margin-bottom: 60px;
@@ -259,12 +342,12 @@ button {
   display: block;
   background-image: url("../../images/yellow-splash.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 500px;
   height: 48px;
   bottom: 0;
   left: 0;
-  transform: translate(250px, 8px);
+  transform: translate(250px, 5px);
   z-index: -1;
 }
 .extension-container .extension__description {
@@ -287,6 +370,22 @@ button {
 }
 .pricing-container .pricing__title {
   margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+.pricing-container .pricing__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/yellow-splash.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 480px;
+  height: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-10px, 5px);
+  z-index: -1;
 }
 .pricing-container .pricing__description {
   margin-inline: auto;
@@ -465,7 +564,7 @@ button {
 .footer-container .footer__navigation-item:first-child::before {
   content: "";
   position: absolute;
-  background-image: url(../../images/globus.svg);
+  background-image: url("../../images/globus.svg");
   background-repeat: no-repeat;
   top: 0;
   right: 85%;
@@ -476,7 +575,7 @@ button {
 .footer-container .footer__navigation-item:first-child::after {
   content: "";
   position: absolute;
-  background-image: url(../../images/arrow-down.svg);
+  background-image: url("../../images/arrow-down.svg");
   background-repeat: no-repeat;
   top: 50%;
   right: 0;

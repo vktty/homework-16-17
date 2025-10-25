@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .header {
     background-color: $primary-dark-blue;
@@ -12,13 +13,13 @@
     &__logo {
         width: 191px;
         height: 34px;
+        margin-right: auto;
     }
 
     &__list {
         display: flex;
         gap: 32px;
         margin-right: 60px;
-        margin-left: auto;
 
         &-item {}
 
@@ -42,12 +43,94 @@
     }
 
     &__button {
-
         display: flex;
         gap: 24px;
+
         &-login {}
 
-        &-try {
+        &-try {}
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__burger {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 42px;
+        height: 30px;
+    }
+
+    &__burger-line {
+        width: 42px;
+        height: 2px;
+        background-color: $white;
+        border-radius: 2px;
+        transition: all 0.2s ease-in-out;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            transition-delay: 0.2s;
         }
     }
 }
+
+
+@include media-down(custom-1220) {
+    .header {
+        &__navigation {
+            gap: 20px;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__menu {
+            display: block;
+        }
+
+        &__burger {
+            display: flex;
+        }
+
+        #burger-checkbox:checked+&__burger+&__list {
+            display: flex;
+        }
+
+        #burger-checkbox:checked+&__burger>&__burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 10px);
+        }
+
+        #burger-checkbox:checked+&__burger>&__burger-line:nth-child(2) {
+            transform: scale(0);
+        }
+
+        #burger-checkbox:checked+&__burger>&__burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(9px, -10px);
+        }
+    }
+}
+
+
+@include media-down(md) {
+    .header {
+        &__button {
+            display: none;
+        }
+    }
+}
+
+// xs: 0,
+// sm: 320px,
+// md: 768px,
+// lg: 1152px,
+// custom-1220,
+// custom-1435: 1435px,
+// xl: 1440px,
+// xxl: 1920px

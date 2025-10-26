@@ -25,11 +25,10 @@
     .work-management {
 
         .project-management {
-            max-height: 547px;
             display: flex;
             align-items: center;
-            gap: 60px;
-            margin-bottom: 100px;
+            justify-content: center;
+            gap: 10px;
 
             &__info {
                 max-width: 672px;
@@ -37,9 +36,11 @@
             }
 
             &__title {
-                margin-bottom: 24px;
+                padding-bottom: 24px;
                 position: relative;
                 z-index: 2;
+                overflow: hidden;
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -51,7 +52,7 @@
                     height: 80px;
                     bottom: 0;
                     left: 0;
-                    transform: translate(0, 25px);
+                    transform: translate(0, 5px);
                     z-index: -1;
                 }
             }
@@ -72,21 +73,30 @@
         .work-together {
             display: flex;
             align-items: center;
+            align-content: center;
             gap: 100px;
+            padding-top: 100px;
 
             &__image {
-                max-width: 710px;
+                background-image: url("../../images/Work-Together.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 710px;
+                height: 661px;
+                flex-shrink: 1;
             }
 
             &__info {
                 max-width: 670px;
                 color: $black;
+                flex-shrink: 5;
             }
 
             &__title {
-                margin-bottom: 24px;
+                padding-bottom: 24px;
                 position: relative;
                 z-index: 2;
+                overflow: hidden;
 
                 &::after {
                     content: "";
@@ -99,7 +109,7 @@
                     height: 45px;
                     bottom: 0;
                     left: 0;
-                    transform: translate(200px, 5px);
+                    transform: translate(200px, -20px);
                     z-index: -1;
                 }
             }
@@ -110,6 +120,43 @@
             }
 
             &__button {}
+        }
+    }
+}
+
+@include media-down(custom-1284) {
+    .work-management-container {
+        .work-management {
+            .work-together {
+                &__title {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 430px;
+                        height: 45px;
+                        transform: translate(0, -18px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-down (lg) {
+    .work-management-container {
+        .work-management {
+            &__title {
+                font-size: $font-size-h2;
+            }
+
+            .work-together {
+                gap: 33px;
+
+                &__title {
+                    font-size: $font-size-h2;
+                }
+            }
         }
     }
 }
@@ -125,6 +172,15 @@
 
         &::before {
             display: none;
+        }
+
+        .work-management {
+            .work-together {
+                &__image {
+                    width: 583px;
+                    height: 542px;
+                }
+            }
         }
     }
 }
@@ -144,6 +200,7 @@
 
                 &__title {
                     font-size: 3rem;
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -151,7 +208,7 @@
                         height: 80px;
                         bottom: 0;
                         left: 38%;
-                        transform: translate(0, 40px);
+                        transform: translate(0, 15px);
                         z-index: -1;
                     }
                 }
@@ -164,6 +221,33 @@
                     margin-inline: auto;
                     width: 561px;
                     height: 349px;
+                }
+            }
+
+            .work-together {
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+                gap: 100px;
+
+                &__info {
+                    text-align: center;
+                }
+
+                &__title {
+                    font-size: 3rem;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 340px;
+                        height: 45px;
+                        transform: translate(295px, -7px);
+                    }
+                }
+
+                &__button {
+                    margin-inline: auto;
                 }
             }
         }
@@ -182,10 +266,33 @@
                         height: 80px;
                         bottom: 0;
                         left: 0;
-                        transform: translate(70px, 40px);
+                        transform: translate(70px, 18px);
                     }
                 }
 
+            }
+
+            .work-together {
+                &__info {
+                    max-width: 429px;
+                }
+
+                &__title {
+                    font-size: 3rem;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 340px;
+                        height: 45px;
+                        transform: translate(175px, -7px);
+                    }
+                }
+
+                &__image {
+                    max-width: 429px;
+                }
             }
         }
     }
@@ -196,30 +303,26 @@
         .work-management {
             .project-management {
                 &__title {
-                        font-size: 2.5rem;
+                    font-size: 2.5rem;
+
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 500px;
+                        width: 450px;
                         height: 80px;
                         bottom: 0;
-                        left: 25px;
-                        transform: translate(0, 43px);
+                        left: 50px;
+                        transform: translate(0, 23px);
                     }
                 }
 
             }
-        }
-    }
-} 
 
-@include media-down (custom-380) {
-    .work-management-container {
-        padding: 80px 0;
-        .work-management {
-            .project-management {
+            .work-together {
+                &__info {
+                    max-width: 341px;
+                }
                 &__title {
-                    font-size: 2rem;
                     &::after {
                         content: "";
                         position: absolute;
@@ -227,21 +330,74 @@
                         height: 80px;
                         bottom: 0;
                         left: 40px;
-                        transform: translate(0, 54px);
+                        transform: translate(0, 30px);
                     }
+                }
+                &__image {
+                    max-width: 341px;
+                }
+            }
+        }
+
+    }
+}
+
+@include media-down (custom-380) {
+    .work-management-container {
+        padding: 80px 0;
+
+        .work-management {
+            .project-management {
+                &__title {
+                    font-size: 2rem;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 360px;
+                        height: 80px;
+                        bottom: 0;
+                        left: 40px;
+                        transform: translate(0, 30px);
+                    }
+                }
+            }
+
+            .work-together {
+                &__info {
+                    max-width: 320px;
+                }
+
+                &__title {
+                    font-size: 2rem;
+                    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 225px;
+                        height: 45px;
+                        transform: translate(90px, 2px);
+                    }
+                }
+                &__image {
+                    max-width: 320px;
                 }
             }
         }
     }
 }
 
+
 @include media-down (sm) {
     .work-management-container {
         padding: 80px 0;
+
         .work-management {
             .project-management {
                 &__title {
                     font-size: 2rem;
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -249,27 +405,40 @@
                         height: 80px;
                         bottom: 0;
                         left: 25px;
-                        transform: translate(0, 54px);
+                        transform: translate(0, 32px);
                     }
                 }
+
                 &__image {
                     width: 286px;
                     height: 177px;
                 }
             }
+
+            .work-together {
+                &__info {
+                    max-width: 288px;
+                }
+
+                &__title {
+                    font-size: 2rem;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 230px;
+                        height: 45px;
+                        transform: translate(75px, 5px);
+                        z-index: -1;
+                    }
+                }
+
+                &__image {
+                    width: 279px;
+                    height: 260px;
+                }
+            }
         }
     }
 }
-
-// xs: 0,
-// sm: 320px,
-// custom-380: 380px,
-// custom-460: 460px,
-// custom-575: 575px,
-// md: 768px,
-// custom-1050: 1050px,
-// lg: 1152px,
-// custom-1220: 1220px,
-// custom-1435: 1435px,
-// xl: 1440px,
-// xxl: 1920px

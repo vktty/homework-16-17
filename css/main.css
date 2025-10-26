@@ -365,20 +365,20 @@ button {
   z-index: -1;
 }
 .work-management-container .work-management .project-management {
-  max-height: 547px;
   display: flex;
   align-items: center;
-  gap: 60px;
-  margin-bottom: 100px;
+  justify-content: center;
+  gap: 10px;
 }
 .work-management-container .work-management .project-management__info {
   max-width: 672px;
   color: #212529;
 }
 .work-management-container .work-management .project-management__title {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 .work-management-container .work-management .project-management__title::after {
   content: "";
@@ -391,7 +391,7 @@ button {
   height: 80px;
   bottom: 0;
   left: 0;
-  transform: translate(0, 25px);
+  transform: translate(0, 5px);
   z-index: -1;
 }
 .work-management-container .work-management .project-management__description {
@@ -405,19 +405,28 @@ button {
 .work-management-container .work-management .work-together {
   display: flex;
   align-items: center;
+  align-content: center;
   gap: 100px;
+  padding-top: 100px;
 }
 .work-management-container .work-management .work-together__image {
-  max-width: 710px;
+  background-image: url("../../images/Work-Together.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 710px;
+  height: 661px;
+  flex-shrink: 1;
 }
 .work-management-container .work-management .work-together__info {
   max-width: 670px;
   color: #212529;
+  flex-shrink: 5;
 }
 .work-management-container .work-management .work-together__title {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 .work-management-container .work-management .work-together__title::after {
   content: "";
@@ -430,12 +439,33 @@ button {
   height: 45px;
   bottom: 0;
   left: 0;
-  transform: translate(200px, 5px);
+  transform: translate(200px, -20px);
   z-index: -1;
 }
 .work-management-container .work-management .work-together__description {
   margin-bottom: 60px;
   line-height: 1.1111111111rem;
+}
+@media screen and (max-width: 1284px) {
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 430px;
+    height: 45px;
+    transform: translate(0, -18px);
+  }
+}
+@media screen and (max-width: 1152px) {
+  .work-management-container .work-management__title {
+    font-size: 3.5555555556rem;
+  }
+  .work-management-container .work-management .work-together {
+    gap: 33px;
+  }
+  .work-management-container .work-management .work-together__title {
+    font-size: 3.5555555556rem;
+  }
 }
 @media screen and (max-width: 1050px) {
   .work-management-container {
@@ -448,6 +478,10 @@ button {
   }
   .work-management-container::before {
     display: none;
+  }
+  .work-management-container .work-management .work-together__image {
+    width: 583px;
+    height: 542px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -471,7 +505,7 @@ button {
     height: 80px;
     bottom: 0;
     left: 38%;
-    transform: translate(0, 40px);
+    transform: translate(0, 15px);
     z-index: -1;
   }
   .work-management-container .work-management .project-management__button {
@@ -482,6 +516,28 @@ button {
     width: 561px;
     height: 349px;
   }
+  .work-management-container .work-management .work-together {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  .work-management-container .work-management .work-together__info {
+    text-align: center;
+  }
+  .work-management-container .work-management .work-together__title {
+    font-size: 3rem;
+  }
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 340px;
+    height: 45px;
+    transform: translate(295px, -7px);
+  }
+  .work-management-container .work-management .work-together__button {
+    margin-inline: auto;
+  }
 }
 @media screen and (max-width: 576px) {
   .work-management-container .work-management .project-management__title::after {
@@ -491,7 +547,24 @@ button {
     height: 80px;
     bottom: 0;
     left: 0;
-    transform: translate(70px, 40px);
+    transform: translate(70px, 18px);
+  }
+  .work-management-container .work-management .work-together__info {
+    max-width: 429px;
+  }
+  .work-management-container .work-management .work-together__title {
+    font-size: 3rem;
+  }
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 340px;
+    height: 45px;
+    transform: translate(175px, -7px);
+  }
+  .work-management-container .work-management .work-together__image {
+    max-width: 429px;
   }
 }
 @media screen and (max-width: 460px) {
@@ -501,11 +574,26 @@ button {
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 500px;
+    width: 450px;
     height: 80px;
     bottom: 0;
-    left: 25px;
-    transform: translate(0, 43px);
+    left: 50px;
+    transform: translate(0, 23px);
+  }
+  .work-management-container .work-management .work-together__info {
+    max-width: 341px;
+  }
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 80px;
+    bottom: 0;
+    left: 40px;
+    transform: translate(0, 30px);
+  }
+  .work-management-container .work-management .work-together__image {
+    max-width: 341px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -522,7 +610,24 @@ button {
     height: 80px;
     bottom: 0;
     left: 40px;
-    transform: translate(0, 54px);
+    transform: translate(0, 30px);
+  }
+  .work-management-container .work-management .work-together__info {
+    max-width: 320px;
+  }
+  .work-management-container .work-management .work-together__title {
+    font-size: 2rem;
+  }
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 225px;
+    height: 45px;
+    transform: translate(90px, 2px);
+  }
+  .work-management-container .work-management .work-together__image {
+    max-width: 320px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -539,11 +644,30 @@ button {
     height: 80px;
     bottom: 0;
     left: 25px;
-    transform: translate(0, 54px);
+    transform: translate(0, 32px);
   }
   .work-management-container .work-management .project-management__image {
     width: 286px;
     height: 177px;
+  }
+  .work-management-container .work-management .work-together__info {
+    max-width: 288px;
+  }
+  .work-management-container .work-management .work-together__title {
+    font-size: 2rem;
+  }
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 230px;
+    height: 45px;
+    transform: translate(75px, 5px);
+    z-index: -1;
+  }
+  .work-management-container .work-management .work-together__image {
+    width: 279px;
+    height: 260px;
   }
 }
 .extension-container {

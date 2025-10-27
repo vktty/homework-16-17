@@ -50,22 +50,22 @@ button {
 @font-face {
   font-family: "inter";
   font-weight: 400;
-  src: url("../../fonts/inter/regular/Inter-Regular.eot"), url("../../fonts/inter/regular/Inter-Regular.otf") format("opentype"), url("../../fonts/inter/regular/Inter-Regular.ttf") format("truetype"), url("../../fonts/inter/regular/Inter-Regular.woff") format("woff"), url("../../fonts/inter/regular/Inter-Regular.woff2") format("woff2");
+  src: url("../fonts/inter/regular/Inter-Regular.eot"), url("../fonts/inter/regular/Inter-Regular.otf") format("opentype"), url("../fonts/inter/regular/Inter-Regular.ttf") format("truetype"), url("../fonts/inter/regular/Inter-Regular.woff") format("woff"), url("../fonts/inter/regular/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 500;
-  src: url("../../fonts/inter/medium/Inter-Medium.eot"), url("../../fonts/inter/medium/Inter-Medium.otf") format("opentype"), url("../../fonts/inter/medium/Inter-Medium.ttf") format("truetype"), url("../../fonts/inter/medium/Inter-Medium.woff") format("woff"), url("../../fonts/inter/medium/Inter-Medium.woff2") format("woff2");
+  src: url("../fonts/inter/medium/Inter-Medium.eot"), url("../fonts/inter/medium/Inter-Medium.otf") format("opentype"), url("../fonts/inter/medium/Inter-Medium.ttf") format("truetype"), url("../fonts/inter/medium/Inter-Medium.woff") format("woff"), url("../fonts/inter/medium/Inter-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 600;
-  src: url("../../fonts/inter/semibold/Inter-SemiBold.eot"), url("../../fonts/inter/semibold/Inter-SemiBold.otf") format("opentype"), url("../../fonts/inter/semibold/Inter-SemiBold.ttf") format("truetype"), url("../../fonts/inter/semibold/Inter-SemiBold.woff") format("woff"), url("../../fonts/inter/semibold/Inter-SemiBold.woff2") format("woff2");
+  src: url("../fonts/inter/semibold/Inter-SemiBold.eot"), url("../fonts/inter/semibold/Inter-SemiBold.otf") format("opentype"), url("../fonts/inter/semibold/Inter-SemiBold.ttf") format("truetype"), url("../fonts/inter/semibold/Inter-SemiBold.woff") format("woff"), url("../fonts/inter/semibold/Inter-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 700;
-  src: url("../../fonts/inter/bold/Inter-Bold.eot"), url("../../fonts/inter/bold/Inter-Bold.otf") format("opentype"), url("../../fonts/inter/bold/Inter-Bold.ttf") format("truetype"), url("../../fonts/inter/bold/Inter-Bold.woff") format("woff"), url("../../fonts/inter/bold/Inter-Bold.woff2") format("woff2");
+  src: url("../fonts/inter/bold/Inter-Bold.eot"), url("../fonts/inter/bold/Inter-Bold.otf") format("opentype"), url("../fonts/inter/bold/Inter-Bold.ttf") format("truetype"), url("../fonts/inter/bold/Inter-Bold.woff") format("woff"), url("../fonts/inter/bold/Inter-Bold.woff2") format("woff2");
 }
 .button {
   font-size: 18px;
@@ -684,7 +684,7 @@ button {
   color: #ffffff;
 }
 .extension-container .extension__title {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
   position: relative;
   z-index: 2;
 }
@@ -699,18 +699,78 @@ button {
   height: 48px;
   bottom: 0;
   left: 0;
-  transform: translate(250px, 5px);
+  transform: translate(250px, -19px);
   z-index: -1;
 }
 .extension-container .extension__description {
   margin-bottom: 60px;
 }
 .extension-container .extension__image {
-  min-width: 686px;
+  width: 686px;
   height: 479px;
   background-color: #A7CEFC;
 }
 
+@media screen and (max-width: 1152px) {
+  .extension-container .extension__title {
+    font-size: 3.5555555556rem;
+  }
+  .extension-container .extension__image {
+    width: 459px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .extension-container {
+    padding: 100px 0;
+  }
+  .extension-container .extension {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  .extension-container .extension__info {
+    text-align: center;
+  }
+  .extension-container .extension__title {
+    font-size: 3rem;
+  }
+  .extension-container .extension__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 38px;
+    transform: translate(310px, -15px);
+  }
+  .extension-container .extension__button {
+    margin-inline: auto;
+  }
+  .extension-container .extension__image {
+    margin-inline: auto;
+    width: 557px;
+    height: 389px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .extension-container {
+    padding: 80px 0;
+  }
+  .extension-container .extension__title {
+    font-size: 2rem;
+  }
+  .extension-container .extension__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 220px;
+    height: 28px;
+    transform: translate(55px, -15px);
+  }
+  .extension-container .extension__image {
+    width: 284px;
+    height: 198px;
+  }
+}
 .pricing-container {
   padding: 140px 0;
 }

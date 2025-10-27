@@ -10,7 +10,7 @@
         content: "";
         position: absolute;
         display: block;
-        background-image: url("../../images/fingerprint.svg");
+        background-image: url("../images/fingerprint.svg");
         background-repeat: no-repeat;
         background-size: contain;
         top: 0;
@@ -45,7 +45,7 @@
                     content: "";
                     position: absolute;
                     display: block;
-                    background-image: url("../../images/yellow-splash.svg");
+                    background-image: url("../images/yellow-splash.svg");
                     background-repeat: no-repeat;
                     background-size: contain;
                     width: 690px;
@@ -78,7 +78,7 @@
             padding-top: 100px;
 
             &__image {
-                background-image: url("../../images/Work-Together.svg");
+                background-image: url("../images/Work-Together.svg");
                 background-repeat: no-repeat;
                 background-size: contain;
                 width: 710px;
@@ -102,7 +102,7 @@
                     content: "";
                     position: absolute;
                     display: block;
-                    background-image: url("../../images/yellow-splash.svg");
+                    background-image: url("../images/yellow-splash.svg");
                     background-repeat: no-repeat;
                     background-size: contain;
                     width: 500px;
@@ -163,7 +163,7 @@
 
 @include media-down (custom-1050) {
     .work-management-container {
-        background-image: url("../../images/fingerprint.svg");
+        background-image: url("../images/fingerprint.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: -15% 20%;

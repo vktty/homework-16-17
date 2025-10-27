@@ -2,7 +2,7 @@
 @use "../base/mixins" as *;
 
 .hero-container {
-    background-image: url("../../images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center 70%;
@@ -58,7 +58,7 @@
 
 @include media-down(md) {
     .hero-container {
-        background-image: url("../../images/pattern-md.svg");
+        background-image: url("../images/pattern-md.svg");
         background-position: 40% center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -97,7 +97,7 @@
         ::before {
             content: "";
             position: absolute;
-            background-image: url("../../images/pattern.svg");
+            background-image: url("../images/pattern.svg");
             top: 0;
             right: 0;
             width: 1485px;

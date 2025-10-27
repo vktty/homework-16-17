@@ -110,7 +110,7 @@ button {
 .button--arrow-right::after {
   content: "";
   display: block;
-  background-image: url("../../images/arrow-right.svg");
+  background-image: url("../images/arrow-right.svg");
   width: 12px;
   height: 11px;
 }
@@ -122,7 +122,7 @@ button {
   .button--arrow-right::after {
     content: "";
     display: inline-block;
-    background-image: url("../../images/arrow-right.svg");
+    background-image: url("../images/arrow-right.svg");
     width: 12px;
     height: 11px;
     margin-left: 5px;
@@ -237,7 +237,7 @@ button {
   }
 }
 .hero-container {
-  background-image: url("../../images/pattern.svg");
+  background-image: url("../images/pattern.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center 70%;
@@ -280,7 +280,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .hero-container {
-    background-image: url("../../images/pattern-md.svg");
+    background-image: url("../images/pattern-md.svg");
     background-position: 40% center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -315,7 +315,7 @@ button {
   .hero-container ::before {
     content: "";
     position: absolute;
-    background-image: url("../../images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     top: 0;
     right: 0;
     width: 1485px;
@@ -353,7 +353,7 @@ button {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../../images/fingerprint.svg");
+  background-image: url("../images/fingerprint.svg");
   background-repeat: no-repeat;
   background-size: contain;
   top: 0;
@@ -384,7 +384,7 @@ button {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../../images/yellow-splash.svg");
+  background-image: url("../images/yellow-splash.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 690px;
@@ -410,7 +410,7 @@ button {
   padding-top: 100px;
 }
 .work-management-container .work-management .work-together__image {
-  background-image: url("../../images/Work-Together.svg");
+  background-image: url("../images/Work-Together.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 710px;
@@ -432,7 +432,7 @@ button {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../../images/yellow-splash.svg");
+  background-image: url("../images/yellow-splash.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 500px;
@@ -469,7 +469,7 @@ button {
 }
 @media screen and (max-width: 1050px) {
   .work-management-container {
-    background-image: url("../../images/fingerprint.svg");
+    background-image: url("../images/fingerprint.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: -15% 20%;
@@ -692,7 +692,7 @@ button {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../../images/yellow-splash.svg");
+  background-image: url("../images/yellow-splash.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 500px;
@@ -789,7 +789,7 @@ button {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../../images/yellow-splash.svg");
+  background-image: url("../images/yellow-splash.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 480px;
@@ -976,7 +976,7 @@ button {
 .footer-container .footer__navigation-item:first-child::before {
   content: "";
   position: absolute;
-  background-image: url("../../images/globus.svg");
+  background-image: url("../images/globus.svg");
   background-repeat: no-repeat;
   top: 0;
   right: 85%;
@@ -987,7 +987,7 @@ button {
 .footer-container .footer__navigation-item:first-child::after {
   content: "";
   position: absolute;
-  background-image: url("../../images/arrow-down.svg");
+  background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   top: 50%;
   right: 0;

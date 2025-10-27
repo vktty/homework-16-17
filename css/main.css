@@ -170,7 +170,7 @@ button {
 .header__list-link::after {
   content: "";
   position: absolute;
-  background-image: url("../images/arrow-down.svg");
+  background-image: url("./images/arrow-down.svg");
   background-repeat: no-repeat;
   top: 50%;
   right: 0;

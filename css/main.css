@@ -29,6 +29,27 @@ h5 {
   letter-spacing: -0.02rem;
 }
 
+@media screen and (max-width: 1152px) {
+  h1 {
+    font-size: 3.5555555556rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.5555555556rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -265,6 +286,7 @@ button {
 }
 .hero-container .hero__image {
   width: 824px;
+  width: 100%;
   height: 549px;
   background-color: #A7CEFC;
 }
@@ -291,9 +313,6 @@ button {
   }
   .hero-container .hero__info {
     text-align: center;
-  }
-  .hero-container .hero__info-title {
-    font-size: 3rem;
   }
   .hero-container .hero__button-try {
     margin-inline: auto;
@@ -324,9 +343,6 @@ button {
     rotate: -160deg;
     z-index: -1;
     opacity: 0.2;
-  }
-  .hero-container .hero__info-title {
-    font-size: 2rem;
   }
   .hero-container .hero__image {
     max-width: 268px;
@@ -360,7 +376,7 @@ button {
   right: 65%;
   width: 800px;
   height: 450px;
-  transform: translate(10%, 65%);
+  transform: translate(0, 65%);
   opacity: 0.2;
   z-index: -1;
 }
@@ -409,13 +425,13 @@ button {
   gap: 100px;
   padding-top: 100px;
 }
+.work-management-container .work-management .work-together__pictures {
+  max-width: 100%;
+  height: auto;
+}
 .work-management-container .work-management .work-together__image {
-  background-image: url("../images/Work-Together.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 710px;
-  height: 661px;
-  flex-shrink: 1;
+  max-width: 100%;
+  height: auto;
 }
 .work-management-container .work-management .work-together__info {
   max-width: 670px;
@@ -457,14 +473,16 @@ button {
   }
 }
 @media screen and (max-width: 1152px) {
-  .work-management-container .work-management__title {
-    font-size: 3.5555555556rem;
-  }
   .work-management-container .work-management .work-together {
     gap: 33px;
   }
-  .work-management-container .work-management .work-together__title {
-    font-size: 3.5555555556rem;
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 480px;
+    height: 40px;
+    transform: translate(0, -20px);
   }
 }
 @media screen and (max-width: 1050px) {
@@ -479,14 +497,11 @@ button {
   .work-management-container::before {
     display: none;
   }
-  .work-management-container .work-management .work-together__image {
-    width: 583px;
-    height: 542px;
-  }
 }
 @media screen and (max-width: 768px) {
   .work-management-container {
     padding: 100px 0;
+    background-position: -15% 5%;
   }
   .work-management-container .work-management .project-management {
     flex-wrap: wrap;
@@ -494,9 +509,6 @@ button {
   }
   .work-management-container .work-management .project-management__info {
     text-align: center;
-  }
-  .work-management-container .work-management .project-management__title {
-    font-size: 3rem;
   }
   .work-management-container .work-management .project-management__title::after {
     content: "";
@@ -511,11 +523,6 @@ button {
   .work-management-container .work-management .project-management__button {
     margin-inline: auto;
   }
-  .work-management-container .work-management .project-management__image {
-    margin-inline: auto;
-    width: 561px;
-    height: 349px;
-  }
   .work-management-container .work-management .work-together {
     flex-direction: column-reverse;
     flex-wrap: wrap;
@@ -524,53 +531,49 @@ button {
   .work-management-container .work-management .work-together__info {
     text-align: center;
   }
-  .work-management-container .work-management .work-together__title {
-    font-size: 3rem;
-  }
   .work-management-container .work-management .work-together__title::after {
     content: "";
     position: absolute;
     display: block;
     width: 340px;
     height: 45px;
-    transform: translate(295px, -7px);
+    bottom: 0;
+    left: 43%;
+    transform: translate(0, -7px);
   }
   .work-management-container .work-management .work-together__button {
     margin-inline: auto;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 675px) {
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 530px;
-    height: 80px;
+    width: 560px;
+    height: 110px;
     bottom: 0;
-    left: 0;
-    transform: translate(70px, 18px);
+    left: 18%;
+    transform: translate(0, 38px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .work-management-container .work-management .project-management__title {
+    font-size: 2.5rem;
+  }
+  .work-management-container .work-management .project-management__title::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    bottom: 0;
+    left: 38%;
+    transform: translate(0, -15px);
   }
   .work-management-container .work-management .work-together__info {
     max-width: 429px;
   }
-  .work-management-container .work-management .work-together__title {
-    font-size: 3rem;
-  }
-  .work-management-container .work-management .work-together__title::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 340px;
-    height: 45px;
-    transform: translate(175px, -7px);
-  }
-  .work-management-container .work-management .work-together__image {
-    max-width: 429px;
-  }
 }
 @media screen and (max-width: 460px) {
-  .work-management-container .work-management .project-management__title {
-    font-size: 2.5rem;
-  }
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
@@ -589,34 +592,25 @@ button {
     width: 360px;
     height: 80px;
     bottom: 0;
-    left: 40px;
+    left: 15%;
     transform: translate(0, 30px);
-  }
-  .work-management-container .work-management .work-together__image {
-    max-width: 341px;
   }
 }
 @media screen and (max-width: 380px) {
   .work-management-container {
     padding: 80px 0;
   }
-  .work-management-container .work-management .project-management__title {
-    font-size: 2rem;
-  }
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 360px;
+    width: 410px;
     height: 80px;
     bottom: 0;
-    left: 40px;
-    transform: translate(0, 30px);
+    left: 30px;
+    transform: translate(0, 25px);
   }
   .work-management-container .work-management .work-together__info {
     max-width: 320px;
-  }
-  .work-management-container .work-management .work-together__title {
-    font-size: 2rem;
   }
   .work-management-container .work-management .work-together__title::after {
     content: "";
@@ -624,27 +618,23 @@ button {
     display: block;
     width: 225px;
     height: 45px;
-    transform: translate(90px, 2px);
-  }
-  .work-management-container .work-management .work-together__image {
-    max-width: 320px;
+    bottom: 0;
+    left: 40%;
+    transform: translate(0, 2px);
   }
 }
 @media screen and (max-width: 320px) {
   .work-management-container {
     padding: 80px 0;
   }
-  .work-management-container .work-management .project-management__title {
-    font-size: 2rem;
-  }
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 340px;
+    width: 400px;
     height: 80px;
     bottom: 0;
-    left: 25px;
-    transform: translate(0, 32px);
+    left: 5px;
+    transform: translate(0, 25px);
   }
   .work-management-container .work-management .project-management__image {
     width: 286px;
@@ -653,21 +643,29 @@ button {
   .work-management-container .work-management .work-together__info {
     max-width: 288px;
   }
-  .work-management-container .work-management .work-together__title {
-    font-size: 2rem;
-  }
   .work-management-container .work-management .work-together__title::after {
     content: "";
     position: absolute;
     display: block;
     width: 230px;
     height: 45px;
-    transform: translate(75px, 5px);
+    bottom: 0;
+    left: 40%;
+    transform: translate(0, 5px);
     z-index: -1;
   }
-  .work-management-container .work-management .work-together__image {
-    width: 279px;
-    height: 260px;
+}
+@media screen and (max-width: 275px) {
+  .work-management-container .work-management .work-together__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 220px;
+    height: 43px;
+    bottom: 0;
+    left: 20%;
+    transform: translate(0, 5px);
+    z-index: -1;
   }
 }
 .extension-container {
@@ -695,29 +693,42 @@ button {
   background-image: url("../images/yellow-splash.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 500px;
+  width: 340px;
   height: 48px;
   bottom: 0;
-  left: 0;
-  transform: translate(250px, -19px);
+  left: 38%;
+  transform: translate(0, -19px);
   z-index: -1;
 }
 .extension-container .extension__description {
   margin-bottom: 60px;
 }
 .extension-container .extension__image {
-  width: 686px;
+  max-width: 686px;
+  width: 100%;
   height: 479px;
   background-color: #A7CEFC;
 }
 
+@media screen and (max-width: 1436px) {
+  .extension-container .extension__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../images/yellow-splash.svg");
+    width: 340px;
+    height: 48px;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, -19px);
+  }
+}
 @media screen and (max-width: 1152px) {
+  .extension-container .extension__info {
+    max-width: 592px;
+  }
   .extension-container .extension__title {
     font-size: 3.5555555556rem;
-  }
-  .extension-container .extension__image {
-    width: 459px;
-    height: 320px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -729,10 +740,12 @@ button {
     gap: 60px;
   }
   .extension-container .extension__info {
+    margin-inline: auto;
     text-align: center;
   }
   .extension-container .extension__title {
     font-size: 3rem;
+    overflow: hidden;
   }
   .extension-container .extension__title::after {
     content: "";
@@ -740,7 +753,9 @@ button {
     display: block;
     width: 320px;
     height: 38px;
-    transform: translate(310px, -15px);
+    top: 0;
+    left: 43%;
+    transform: translate(0, 22px);
   }
   .extension-container .extension__button {
     margin-inline: auto;
@@ -749,6 +764,30 @@ button {
     margin-inline: auto;
     width: 557px;
     height: 389px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .extension-container .extension__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 280px;
+    height: 40px;
+    bottom: 0;
+    left: 20%;
+    transform: translate(0, 200%);
+  }
+}
+@media screen and (max-width: 380px) {
+  .extension-container .extension__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 36px;
+    bottom: 0;
+    left: 12%;
+    transform: translate(0, 215%);
   }
 }
 @media screen and (max-width: 320px) {
@@ -762,9 +801,11 @@ button {
     content: "";
     position: absolute;
     display: block;
-    width: 220px;
-    height: 28px;
-    transform: translate(55px, -15px);
+    width: 210px;
+    height: 25px;
+    bottom: 0;
+    left: 18%;
+    transform: translate(0, 55px);
   }
   .extension-container .extension__image {
     width: 284px;
@@ -781,7 +822,7 @@ button {
   color: #212529;
 }
 .pricing-container .pricing__title {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
   position: relative;
   z-index: 2;
 }
@@ -789,21 +830,21 @@ button {
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../images/yellow-splash.svg");
+  background-image: url("../images/yellow-splash-plan.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 480px;
-  height: 50px;
+  width: 310px;
+  height: 30px;
   bottom: 0;
   left: 50%;
-  transform: translate(-10px, 5px);
+  transform: translate(0, -12px);
   z-index: -1;
 }
 .pricing-container .pricing__description {
   margin-inline: auto;
   margin-bottom: 60px;
   line-height: 1.6666666667rem;
-  width: 979px;
+  max-width: 979px;
 }
 .pricing-container .pricing__list {
   display: flex;
@@ -826,6 +867,7 @@ button {
 }
 .pricing-container .pricing__card-name {
   font-weight: 600;
+  font-size: 1.3333333333rem;
 }
 .pricing-container .pricing__card-description {
   font-weight: 500;
@@ -839,7 +881,47 @@ button {
   font-size: 0.8888888889rem;
   line-height: 1.1111111111rem;
 }
-.pricing__block .pricing__card--active {
+.pricing-container .pricing__point-list__item {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+.pricing-container .pricing__point-list__item:before {
+  content: "";
+  background-image: url("../images/black-check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+.pricing-container .pricing__slider {
+  margin-top: 60px;
+  display: flex;
+  display: none;
+  justify-content: center;
+  gap: 12px;
+}
+.pricing-container .pricing__slider-item:nth-child(1) {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4F9CF9;
+}
+.pricing-container .pricing__slider-item:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #043873;
+}
+.pricing-container .pricing__slider-item:nth-child(3) {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4F9CF9;
+}
+
+.pricing__list .pricing__card--active {
   background-color: #043873;
   border: none;
   padding: 80px 44px;
@@ -856,11 +938,88 @@ button {
 .pricing__card--active .pricing__point-list__item {
   font-weight: 500;
 }
+.pricing__card--active .pricing__point-list__item:before {
+  content: "";
+  background-image: url("../images/yellow-check.svg");
+}
 .pricing__card--active .pricing__button {
   color: #ffffff;
   border: none;
 }
 
+@media screen and (max-width: 975px) {
+  .pricing-container .pricing__list {
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  .pricing-container .pricing__card {
+    max-width: 384px;
+  }
+  .pricing-container .pricing__card:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-61%, 40px);
+  }
+  .pricing-container .pricing__card:nth-child(2) {
+    margin-inline: auto;
+  }
+  .pricing-container .pricing__card:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(267px, 40px);
+  }
+}
+@media screen and (max-width: 578px) {
+  .pricing-container .pricing__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../images/yellow-splash-sm.svg");
+    width: 150px;
+    height: 38px;
+    bottom: 0;
+    left: 38%;
+    transform: translate(0, -10px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .pricing-container {
+    padding: 80px 0;
+  }
+  .pricing-container .pricing__description {
+    max-width: 288px;
+  }
+  .pricing-container .pricing__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../images/yellow-splash-sm.svg");
+    width: 100px;
+    height: 29px;
+    bottom: 0;
+    left: 35%;
+    transform: translate(0, -10px);
+  }
+  .pricing-container .pricing__card {
+    padding: 20px;
+  }
+  .pricing-container .pricing__card-title {
+    color: #ffffff;
+  }
+  .pricing-container .pricing__slider {
+    display: flex;
+  }
+  .pricing-container .pricing__card {
+    display: none;
+  }
+  .pricing-container .pricing__list :nth-of-type(2) {
+    display: block;
+  }
+}
 .footer-container {
   background-color: #043873;
   padding: 140px 0 32px 0;

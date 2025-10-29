@@ -12,6 +12,7 @@ $font-size: 18px;
 
 $font-size-h1: 4rem;
 $font-size-h2: 3.555555555555556rem;
+$font-size-h3: 3rem;
 $font-size-h4: 2rem;
 $font-size-h5: 1.555555555555556rem;
 
@@ -31,7 +32,7 @@ $line-height-h4: 100%;
 $line-height-h5: 2rem;
 
 $line-height-p1: $line-height;
-$line-height-p2: 1.666666666666667rem; 
+$line-height-p2: 1.666666666666667rem;
 $line-height-p3: 1.111111111111111rem;
 
 // letter spacing
@@ -45,21 +46,27 @@ $letter-spacing-h4: $letter-spacing;
 $letter-spacing-h5: $letter-spacing;
 
 $letter-spacing-p1: 0;
-$letter-spacing-p2: $letter-spacing; 
+$letter-spacing-p2: $letter-spacing;
 $letter-spacing-p3: $letter-spacing;
 
 $breakpoints: (
     xs: 0,
+    custom-275: 275px,
     sm: 320px,
     custom-380: 380px,
     custom-460: 460px,
+    custom-480: 480px,
     custom-576: 576px,
+    custom-578: 578px,
+    custom-675: 675px,
     md: 768px,
+    custom-975: 975px,
     custom-1050: 1050px,
     lg: 1152px,
     custom-1220: 1220px,
     custom-1284: 1284px,
     custom-1435: 1435px,
+    custom-1436: 1436px,
     xl: 1440px,
     xxl: 1920px
-)
+    )

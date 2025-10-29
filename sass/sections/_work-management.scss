@@ -17,7 +17,7 @@
         right: 65%;
         width: 800px;
         height: 450px;
-        transform: translate(10%, 65%);
+        transform: translate(0, 65%);
         opacity: 0.2;
         z-index: -1;
     }
@@ -77,13 +77,14 @@
             gap: 100px;
             padding-top: 100px;
 
+            &__pictures {
+                max-width: 100%;
+                height: auto;
+            }
+
             &__image {
-                background-image: url("../images/Work-Together.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 710px;
-                height: 661px;
-                flex-shrink: 1;
+                max-width: 100%;
+                height: auto;
             }
 
             &__info {
@@ -127,6 +128,7 @@
 @include media-down(custom-1284) {
     .work-management-container {
         .work-management {
+
             .work-together {
                 &__title {
                     &::after {
@@ -146,15 +148,20 @@
 @include media-down (lg) {
     .work-management-container {
         .work-management {
-            &__title {
-                font-size: $font-size-h2;
-            }
 
             .work-together {
                 gap: 33px;
 
                 &__title {
-                    font-size: $font-size-h2;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 480px;
+                        height: 40px;
+                        transform: translate(0, -20px);
+                    }
                 }
             }
         }
@@ -173,21 +180,13 @@
         &::before {
             display: none;
         }
-
-        .work-management {
-            .work-together {
-                &__image {
-                    width: 583px;
-                    height: 542px;
-                }
-            }
-        }
     }
 }
 
 @include media-down (md) {
     .work-management-container {
         padding: 100px 0;
+        background-position: -15% 5%;
 
         .work-management {
             .project-management {
@@ -199,7 +198,6 @@
                 }
 
                 &__title {
-                    font-size: 3rem;
 
                     &::after {
                         content: "";
@@ -216,12 +214,6 @@
                 &__button {
                     margin-inline: auto;
                 }
-
-                &__image {
-                    margin-inline: auto;
-                    width: 561px;
-                    height: 349px;
-                }
             }
 
             .work-together {
@@ -234,7 +226,6 @@
                 }
 
                 &__title {
-                    font-size: 3rem;
 
                     &::after {
                         content: "";
@@ -242,7 +233,9 @@
                         display: block;
                         width: 340px;
                         height: 45px;
-                        transform: translate(295px, -7px);
+                        bottom: 0;
+                        left: 43%;
+                        transform: translate(0, -7px);
                     }
                 }
 
@@ -254,7 +247,7 @@
     }
 }
 
-@include media-down (custom-576) {
+@include media-down(custom-675) {
     .work-management-container {
         .work-management {
             .project-management {
@@ -262,11 +255,33 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 530px;
-                        height: 80px;
+                        width: 560px;
+                        height: 110px;
                         bottom: 0;
-                        left: 0;
-                        transform: translate(70px, 18px);
+                        left: 18%;
+                        transform: translate(0, 38px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include media-down (custom-576) {
+    .work-management-container {
+        .work-management {
+            .project-management {
+                &__title {
+                    font-size: 2.5rem;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 500px;
+                        height: 40px;
+                        bottom: 0;
+                        left: 38%;
+                        transform: translate(0, -15px);
                     }
                 }
 
@@ -277,22 +292,7 @@
                     max-width: 429px;
                 }
 
-                &__title {
-                    font-size: 3rem;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        display: block;
-                        width: 340px;
-                        height: 45px;
-                        transform: translate(175px, -7px);
-                    }
-                }
-
-                &__image {
-                    max-width: 429px;
-                }
+                &__title {}
             }
         }
     }
@@ -303,8 +303,6 @@
         .work-management {
             .project-management {
                 &__title {
-                    font-size: 2.5rem;
-
                     &::after {
                         content: "";
                         position: absolute;
@@ -314,6 +312,7 @@
                         left: 50px;
                         transform: translate(0, 23px);
                     }
+
                 }
 
             }
@@ -322,6 +321,7 @@
                 &__info {
                     max-width: 341px;
                 }
+
                 &__title {
                     &::after {
                         content: "";
@@ -329,12 +329,9 @@
                         width: 360px;
                         height: 80px;
                         bottom: 0;
-                        left: 40px;
+                        left: 15%;
                         transform: translate(0, 30px);
                     }
-                }
-                &__image {
-                    max-width: 341px;
                 }
             }
         }
@@ -349,16 +346,15 @@
         .work-management {
             .project-management {
                 &__title {
-                    font-size: 2rem;
 
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 360px;
+                        width: 410px;
                         height: 80px;
                         bottom: 0;
-                        left: 40px;
-                        transform: translate(0, 30px);
+                        left: 30px;
+                        transform: translate(0, 25px);
                     }
                 }
             }
@@ -369,19 +365,17 @@
                 }
 
                 &__title {
-                    font-size: 2rem;
-                    
+
                     &::after {
                         content: "";
                         position: absolute;
                         display: block;
                         width: 225px;
                         height: 45px;
-                        transform: translate(90px, 2px);
+                        bottom: 0;
+                        left: 40%;
+                        transform: translate(0, 2px);
                     }
-                }
-                &__image {
-                    max-width: 320px;
                 }
             }
         }
@@ -396,16 +390,15 @@
         .work-management {
             .project-management {
                 &__title {
-                    font-size: 2rem;
 
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 340px;
+                        width: 400px;
                         height: 80px;
                         bottom: 0;
-                        left: 25px;
-                        transform: translate(0, 32px);
+                        left: 5px;
+                        transform: translate(0, 25px);
                     }
                 }
 
@@ -421,7 +414,6 @@
                 }
 
                 &__title {
-                    font-size: 2rem;
 
                     &::after {
                         content: "";
@@ -429,14 +421,36 @@
                         display: block;
                         width: 230px;
                         height: 45px;
-                        transform: translate(75px, 5px);
+                        bottom: 0;
+                        left: 40%;
+                        transform: translate(0, 5px);
                         z-index: -1;
                     }
                 }
+            }
+        }
+    }
+}
 
-                &__image {
-                    width: 279px;
-                    height: 260px;
+
+@include media-down (custom-275) {
+    .work-management-container {
+        .work-management {
+            .project-management {}
+
+            .work-together {
+                &__title {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 220px;
+                        height: 43px;
+                        bottom: 0;
+                        left: 20%;
+                        transform: translate(0, 5px);
+                        z-index: -1;
+                    }
                 }
             }
         }

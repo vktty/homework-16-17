@@ -27,11 +27,11 @@
                 background-image: url("../images/yellow-splash.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                width: 500px;
+                width: 340px;
                 height: 48px;
                 bottom: 0;
-                left: 0;
-                transform: translate(250px, -19px);
+                left: 38%;
+                transform: translate(0, -19px);
                 z-index: -1;
             }
         }
@@ -43,9 +43,33 @@
         &__button {}
 
         &__image {
-            width: 686px;
+            // width: 49vw;
+            // width: 100%;
+            max-width: 686px;
+            width: 100%;
             height: 479px;
             background-color: $secondary-light-blue;
+        }
+    }
+}
+
+@include media-down(custom-1436) {
+    .extension-container {
+        .extension {
+            &__title {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    background-image: url("../images/yellow-splash.svg");
+                    width: 340px;
+                    height: 48px;
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(0, -19px);
+
+                }
+            }
         }
     }
 }
@@ -53,13 +77,12 @@
 @include media-down (lg) {
     .extension-container {
         .extension {
-            &__title {
-                font-size: $font-size-h2;
+            &__info {
+                max-width: 592px;
             }
 
-            &__image {
-                width: 459px;
-                height: 320px;
+            &__title {
+                font-size: $font-size-h2;
             }
         }
     }
@@ -74,11 +97,13 @@
             gap: 60px;
 
             &__info {
+                margin-inline: auto;
                 text-align: center;
             }
 
             &__title {
                 font-size: 3rem;
+                overflow: hidden;
 
                 &::after {
                     content: "";
@@ -86,7 +111,9 @@
                     display: block;
                     width: 320px;
                     height: 38px;
-                    transform: translate(310px, -15px);
+                    top: 0;
+                    left: 43%;
+                    transform: translate(0, 22px);
                 }
             }
 
@@ -103,6 +130,45 @@
     }
 }
 
+@include media-down (custom-480) {
+    .extension-container {
+        .extension {
+            &__title {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 280px;
+                    height: 40px;
+                    bottom: 0;
+                    left: 20%;
+                    transform: translate(0, 200%);
+                }
+            }
+        }
+    }
+}
+
+@include media-down (custom-380) {
+    .extension-container {
+        .extension {
+            &__title {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 250px;
+                    height: 36px;
+                    bottom: 0;
+                    left: 12%;
+                    transform: translate(0, 215%);
+                }
+            }
+        }
+    }
+}
+
+
 @include media-down (sm) {
     .extension-container {
         padding: 80px 0;
@@ -115,9 +181,11 @@
                     content: "";
                     position: absolute;
                     display: block;
-                    width: 220px;
-                    height: 28px;
-                    transform: translate(55px, -15px);
+                    width: 210px;
+                    height: 25px;
+                    bottom: 0;
+                    left: 18%;
+                    transform: translate(0, 55px);
                 }
             }
 

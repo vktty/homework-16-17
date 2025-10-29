@@ -35,6 +35,7 @@
 
         &__image {
             width: 824px;
+            width: 100%;
             height: 549px;
             background-color: $secondary-light-blue;
         }
@@ -62,16 +63,13 @@
         background-position: 40% center;
         background-size: cover;
         background-repeat: no-repeat;
+
         .hero {
             flex-wrap: wrap;
             gap: 100px;
 
             &__info {
                 text-align: center;
-
-                &-title {
-                    font-size: 3rem;
-                }
             }
 
             &__button-try {
@@ -91,9 +89,10 @@
 @include media-down(sm) {
     .hero-container {
         background-image: none;
-        position: relative; 
+        position: relative;
         overflow: hidden;
         z-index: 1;
+
         ::before {
             content: "";
             position: absolute;
@@ -109,12 +108,6 @@
         }
 
         .hero {
-            &__info {
-                &-title {
-                    font-size: 2rem;
-                }
-            }
-
             &__image {
                 max-width: 268px;
                 height: 191px;

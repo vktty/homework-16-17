@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 html {
     font-family: "inter";
@@ -29,4 +30,32 @@ h5 {
     font-size: $font-size-h5;
     line-height: $line-height-h5;
     letter-spacing: $letter-spacing-h5;
+}
+
+@include media-down(lg) {
+    h1 {
+        font-size: $font-size-h2;
+    }
+}
+
+
+@include media-down(md) {
+    h1 {
+        font-size: $font-size-h2;
+    }
+
+    h2 {
+        font-size: $font-size-h3;
+    }
+}
+
+
+@include media-down(sm) {
+    h1 {
+        font-size: $font-size-h4;
+    }
+
+    h2 {
+        font-size: $font-size-h4;
+    }
 }

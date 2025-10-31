@@ -128,6 +128,13 @@
 @include media-down(custom-1284) {
     .work-management-container {
         .work-management {
+            .project-management {
+
+                &__image {
+                    width: 700px;
+                    height: 400px;
+                }
+            }
 
             .work-together {
                 &__title {
@@ -148,6 +155,16 @@
 @include media-down (lg) {
     .work-management-container {
         .work-management {
+            .project-management {
+                &__info {
+                    max-width: 528px;
+                }
+
+                &__image {
+                    width: 527px;
+                    height: 328px;
+                }
+            }
 
             .work-together {
                 gap: 33px;
@@ -183,6 +200,39 @@
     }
 }
 
+@include media-down(custom-975) {
+    .work-management-container {
+        .work-management {
+            .project-management {
+                &__info {
+                    max-width: 400px;
+                }
+
+                &__title {    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        background-image: url("../images/yellow-splash.svg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 570px;
+                        height: 72px;
+                        bottom: 0;
+                        left: 0;
+                        transform: translate(0, 5px);
+                        z-index: -1;
+                    }
+                }
+                &__image {
+                    width: 450px;
+                    height: 290px;
+                }
+            }
+        }
+    }
+}
+
 @include media-down (md) {
     .work-management-container {
         padding: 100px 0;
@@ -205,7 +255,7 @@
                         width: 530px;
                         height: 80px;
                         bottom: 0;
-                        left: 38%;
+                        left: 7%;
                         transform: translate(0, 15px);
                         z-index: -1;
                     }
@@ -223,6 +273,11 @@
 
                 &__info {
                     text-align: center;
+                }
+
+                &__pictures {
+                    max-width: 70%;
+                    height: auto;
                 }
 
                 &__title {
@@ -247,44 +302,22 @@
     }
 }
 
-@include media-down(custom-675) {
-    .work-management-container {
-        .work-management {
-            .project-management {
-                &__title {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 560px;
-                        height: 110px;
-                        bottom: 0;
-                        left: 18%;
-                        transform: translate(0, 38px);
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 @include media-down (custom-576) {
     .work-management-container {
         .work-management {
             .project-management {
                 &__title {
-                    font-size: 2.5rem;
                     &::after {
                         content: "";
                         position: absolute;
                         width: 500px;
                         height: 40px;
                         bottom: 0;
-                        left: 38%;
+                        left: 15%;
                         transform: translate(0, -15px);
                     }
                 }
-
             }
 
             .work-together {
@@ -302,19 +335,6 @@
     .work-management-container {
         .work-management {
             .project-management {
-                &__title {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 450px;
-                        height: 80px;
-                        bottom: 0;
-                        left: 50px;
-                        transform: translate(0, 23px);
-                    }
-
-                }
-
             }
 
             .work-together {
@@ -353,7 +373,7 @@
                         width: 410px;
                         height: 80px;
                         bottom: 0;
-                        left: 30px;
+                        left: 25px;
                         transform: translate(0, 25px);
                     }
                 }
@@ -362,20 +382,6 @@
             .work-together {
                 &__info {
                     max-width: 320px;
-                }
-
-                &__title {
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        display: block;
-                        width: 225px;
-                        height: 45px;
-                        bottom: 0;
-                        left: 40%;
-                        transform: translate(0, 2px);
-                    }
                 }
             }
         }

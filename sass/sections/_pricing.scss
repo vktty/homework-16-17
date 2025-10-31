@@ -171,12 +171,6 @@
     }
 }
 
-// @include media-down(lg) {
-//     .pricing-container {
-//         .pricing {}
-//     }
-// }
-
 @include media-down(custom-975) {
     .pricing-container {
         .pricing {
@@ -186,34 +180,74 @@
                 display: block;
                 overflow: hidden;
             }
-            
+
             &__card {
                 max-width: 384px;
-                
+
                 &:nth-child(1) {
                     position: absolute;
                     top: 0;
-                    left: 0;
-                    transform: translate(-61%, 40px);
-                    
+                    left: 50%;
+                    transform: translate(calc(-150% - 32px), 40px);
+                    width: 384px;
                 }
 
                 &:nth-child(2) {
                     margin-inline: auto;
                 }
 
+
                 &:nth-child(3) {
                     position: absolute;
                     top: 0;
                     left: 50%;
-                    transform: translate(267px, 40px);
+                    transform: translate(calc(50% + 32px), 40px);
+                    width: 384px;
                 }
             }
         }
     }
 }
 
-@include media-down (custom-578) {
+@include media-down(md) {
+    .pricing-container {
+        .pricing {
+            &__title {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 260px;
+                    height: 23px;
+                    bottom: 0;
+                    left: 48%;
+                    transform: translate(0, -17px);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@include media-down (custom-492) {
+    .pricing-container {
+        .pricing {
+            &__title {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-image: url("../images/yellow-splash-sm.svg");
+                    width: 130px;
+                    height: 35px;
+                    bottom: 0;
+                    left: 37%;
+                    transform: translate(0, -7px);
+                }
+            }
+        }
+    }
+}
+
+@include media-down (custom-368) {
     .pricing-container {
         .pricing {
             &__title {
@@ -222,18 +256,16 @@
                     position: absolute;
                     display: block;
                     background-image: url("../images/yellow-splash-sm.svg");
-                    width: 150px;
-                    height: 38px;
+                    width: 130px;
+                    height: 35px;
                     bottom: 0;
-                    left: 38%;
+                    left: 52%;
                     transform: translate(0, -10px);
                 }
             }
         }
     }
 }
-
-
 
 @include media-down (sm) {
     .pricing-container {
@@ -267,10 +299,6 @@
                 }
             }
 
-            &__slider {
-                display: flex;
-            }
-
             &__card {
                 display: none;
             }
@@ -279,6 +307,9 @@
                 :nth-of-type(2) {
                     display: block;
                 }
+            }
+            &__slider {
+                display: flex;
             }
         }
     }

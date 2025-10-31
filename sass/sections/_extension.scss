@@ -43,32 +43,52 @@
         &__button {}
 
         &__image {
-            // width: 49vw;
-            // width: 100%;
-            max-width: 686px;
-            width: 100%;
+            width: 686px;
             height: 479px;
             background-color: $secondary-light-blue;
         }
     }
 }
 
-@include media-down(custom-1436) {
+@include media-down(xl) {
     .extension-container {
         .extension {
+            &__info {
+                max-width: 592px;
+            }
             &__title {
                 &::after {
                     content: "";
-                    position: absolute;
-                    display: block;
-                    background-image: url("../images/yellow-splash.svg");
+                    width: 340px;
+                    height: 48px;
+                    bottom: 0;
+                    left: 41%;
+                    transform: translate(0, -19px);
+                }
+            }
+        }
+    }
+}
+
+@include media-down(custom-1284) {
+    .extension-container {
+        .extension {
+            &__info {
+                max-width: 560px;
+            }
+            &__title {
+                &::after {
+                    content: "";
                     width: 340px;
                     height: 48px;
                     bottom: 0;
                     left: 0;
                     transform: translate(0, -19px);
-
                 }
+            }
+            &__image {
+                width: 500px;
+                height: 360px;
             }
         }
     }
@@ -78,11 +98,85 @@
     .extension-container {
         .extension {
             &__info {
-                max-width: 592px;
+                max-width: 528px;
             }
 
             &__title {
-                font-size: $font-size-h2;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    background-image: url("../images/yellow-splash.svg");
+                    width: 340px;
+                    height: 48px;
+                    bottom: 0;
+                    left: 40%;
+                    transform: translate(0, -19px);
+                }
+            }
+
+            &__image {
+                width: 459px;
+                height: 320px;
+            }
+        }
+    }
+}
+
+@include media-down(custom-1050) {
+    .extension-container {
+        .extension {
+            gap: 70px;
+
+            &__info {
+                max-width: 470px;
+            }
+            
+            &__title {
+                &::after {
+                    content: "";
+                    width: 340px;
+                    height: 48px;
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(0, -19px);
+                }
+            }
+
+            &__image {
+                width: 459px;
+                height: 310px;
+            }
+        }
+    }
+}
+
+@include media-down(custom-975) {
+    .extension-container {
+        .extension {
+            &__info {
+                max-width: 440px;
+            }
+
+            &__image {
+                width: 459px;
+                height: 310px;
+            }
+        }
+    }
+}
+
+@include media-down(custom-880) {
+    .extension-container {
+        .extension {
+            gap: 10px;
+
+            &__info {
+                max-width: 380px;
+            }
+
+            &__image {
+                height: 280px;
             }
         }
     }
@@ -111,9 +205,9 @@
                     display: block;
                     width: 320px;
                     height: 38px;
-                    top: 0;
-                    left: 43%;
-                    transform: translate(0, 22px);
+                    bottom: 0;
+                    left: 16%;
+                    transform: translate(0, -16px);
                 }
             }
 
@@ -133,17 +227,9 @@
 @include media-down (custom-480) {
     .extension-container {
         .extension {
-            &__title {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    width: 280px;
-                    height: 40px;
-                    bottom: 0;
-                    left: 20%;
-                    transform: translate(0, 200%);
-                }
+            &__image {
+                width: 557px;
+                height: 300px;
             }
         }
     }
@@ -157,11 +243,11 @@
                     content: "";
                     position: absolute;
                     display: block;
-                    width: 250px;
-                    height: 36px;
+                    width: 320px;
+                    height: 38px;
                     bottom: 0;
                     left: 12%;
-                    transform: translate(0, 215%);
+                    transform: translate(0, -16px);
                 }
             }
         }
@@ -184,8 +270,8 @@
                     width: 210px;
                     height: 25px;
                     bottom: 0;
-                    left: 18%;
-                    transform: translate(0, 55px);
+                    left: 20%;
+                    transform: translate(0, -18px);
                 }
             }
 

@@ -47,6 +47,7 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
+
             }
 
             &-link {
@@ -143,7 +144,8 @@
                     position: relative;
                     padding-right: 30px;
                     padding-left: 25px;
-                    &::before{
+
+                    &::before {
                         content: "";
                         position: absolute;
                         background-image: url("../images/globus.svg");
@@ -171,7 +173,7 @@
 
             &-link {
                 color: $white;
-                
+
             }
         }
 
@@ -184,7 +186,169 @@
 
             &-image {}
         }
+    }
+}
 
+@include media-down(custom-1315) {
+    .footer-container {
+        .footer {
+            &__info {
+                gap: 45px;
+            }
+        }
+    }
+}
 
+@include media-down(lg) {
+    .footer-container {
+        .footer {
+            &__product {
+                margin-left: 0;
+            }
+
+            &__company {
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@include media-down(custom-933) {
+    .footer-container {
+        .footer {
+            &__info {
+                flex-direction: column;
+                gap: 100px;
+            }
+
+            &__product {
+                margin-left: 0;
+            }
+
+            &__navigation {
+                &-list {
+                    gap: 51px;
+                }
+            }
+
+            &__socials {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@include media-down(custom-880) {
+    .footer-container {
+        .footer {
+            &__socials {
+                border: none;
+            }
+
+            &__navigation {
+                max-width: 880px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid $secondary-dark-blue;
+            }
+        }
+    }
+}
+
+@include media-down(custom-733) {
+    .footer-container {
+        padding: 80px 0 32px 0;
+        .footer {
+            &__socials {
+                flex-direction: column;
+            }
+
+            &__navigation {
+                max-width: 733px;
+
+                &-list {
+                    flex-direction: column;
+                }
+
+                &-item {
+                    &:first-child {
+                        max-width: 210px;
+                        &::before {
+                            content: "";
+                            top: 0;
+                            right: 90%;
+                            transform: translate(-20%, -5%);
+                        }
+    
+                        &::after {
+                            content: "";
+                            top: 50%;
+                            right: 150px;
+                            transform: translate(0, -5%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-down(sm) {
+    .footer-container {
+        padding: 140px 0 32px 0;
+
+        .footer {
+            &__info {
+                align-items: center;
+                gap: 80px;
+            }
+
+            &__whitepace {
+                text-align: center;
+            }
+
+            &__product,
+            &__resources,
+            &__company {
+                text-align: center;
+            }
+
+            &__company {
+                margin-right: 0;
+            }
+
+            &__socials {
+                align-content: center;
+            }
+
+            &__navigation {
+                &-list {
+                    gap: 20px;
+                    text-align: center;
+                }
+
+                &-item {
+                    &:first-child {
+                        &::before {
+                            content: "";
+                            top: 0;
+                            right: 90%;
+                            transform: translate(140%, -5%);
+                        }
+    
+                        &::after {
+                            content: "";
+                            top: 50%;
+                            right: 20px;
+                            transform: translate(0, -5%);
+                        }
+                    }
+                }
+            }
+
+            &__icons {
+                justify-content: center;
+            }
+        }
     }
 }

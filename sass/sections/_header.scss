@@ -24,8 +24,11 @@
         &-item {}
 
         &-link {
-            position: relative;
+            font-weight: 500;
+            line-height: $line-height-nav;
+            letter-spacing: $letter-spacing-nav;
             padding-right: 30px;
+            position: relative;
             color: $white;
 
             &::after {

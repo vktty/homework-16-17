@@ -52,12 +52,13 @@
                     height: 80px;
                     bottom: 0;
                     left: 0;
-                    transform: translate(0, 5px);
+                    transform: translate(0, 0);
                     z-index: -1;
                 }
             }
 
             &__description {
+                line-height: $line-height-p2;
                 margin-bottom: 60px;
             }
 
@@ -117,7 +118,7 @@
 
             &__description {
                 margin-bottom: 60px;
-                line-height: $line-height-p3;
+                line-height: $line-height-p2;
             }
 
             &__button {}
@@ -311,10 +312,10 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 500px;
-                        height: 40px;
+                        width: 550px;
+                        height: 50px;
                         bottom: 0;
-                        left: 15%;
+                        left: 8%;
                         transform: translate(0, -15px);
                     }
                 }
@@ -370,10 +371,10 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 410px;
-                        height: 80px;
+                        width: 455px;
+                        height: 90px;
                         bottom: 0;
-                        left: 25px;
+                        left: 10px;
                         transform: translate(0, 25px);
                     }
                 }
@@ -400,11 +401,11 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 400px;
-                        height: 80px;
+                        width: 350px;
+                        height: 70px;
                         bottom: 0;
-                        left: 5px;
-                        transform: translate(0, 25px);
+                        left: 20px;
+                        transform: translate(0, 20px);
                     }
                 }
 

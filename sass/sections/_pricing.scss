@@ -61,14 +61,17 @@
             }
 
             &-name {
-                font-weight: 600;
                 font-size: $font-size-p1;
+                font-weight: 600;
+                line-height: $line-height-p1;
+                letter-spacing: $letter-spacing-p1;
             }
 
             &-title {}
 
             &-description {
                 font-weight: 500;
+                line-height: $line-height-button;
             }
         }
 
@@ -167,6 +170,7 @@
 
     &__card--active &__button {
         color: $white;
+        line-height: auto;
         border: none;
     }
 }
@@ -314,24 +318,3 @@
         }
     }
 }
-
-
-
-
-// xs: 0,
-// custom-275: 275px,
-// sm: 320px,
-// custom-380: 380px,
-// custom-460: 460px,
-// custom-480: 480px,
-// custom-576: 576px,
-// custom-578: 578px,
-// custom-675: 675px,
-// md: 768px,
-// custom-1050: 1050px,
-// lg: 1152px,
-// custom-1220: 1220px,
-// custom-1284: 1284px,
-// custom-1435: 1435px,
-// xl: 1440px,
-// xxl: 1920px

@@ -3,6 +3,8 @@
 
 .button {
     font-size: $font-size;
+    line-height: $line-height-button;
+    letter-spacing: $letter-spacing-button;
     font-family: "inter";
     font-weight: 500;
     border-radius: 8px;

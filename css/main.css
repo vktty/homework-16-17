@@ -7,19 +7,19 @@ html {
 
 h1 {
   font-size: 4rem;
-  line-height: 100%;
+  line-height: auto;
   letter-spacing: -0.02rem;
 }
 
 h2 {
   font-size: 3.5555555556rem;
-  line-height: 100%;
+  line-height: auto;
   letter-spacing: -0.02rem;
 }
 
 h4 {
   font-size: 2rem;
-  line-height: 100%;
+  line-height: auto;
   letter-spacing: -0.02rem;
 }
 
@@ -90,6 +90,8 @@ button {
 }
 .button {
   font-size: 18px;
+  line-height: 1.2777777778rem;
+  letter-spacing: -0.02rem;
   font-family: "inter";
   font-weight: 500;
   border-radius: 8px;
@@ -184,8 +186,11 @@ button {
   margin-right: 60px;
 }
 .header__list-link {
-  position: relative;
+  font-weight: 500;
+  line-height: 1.2777777778rem;
+  letter-spacing: 0;
   padding-right: 30px;
+  position: relative;
   color: #ffffff;
 }
 .header__list-link::after {
@@ -435,10 +440,11 @@ button {
   height: 80px;
   bottom: 0;
   left: 0;
-  transform: translate(0, 5px);
+  transform: translate(0, 0);
   z-index: -1;
 }
 .work-management-container .work-management .project-management__description {
+  line-height: 1.6666666667rem;
   margin-bottom: 60px;
 }
 .work-management-container .work-management .project-management__image {
@@ -488,7 +494,7 @@ button {
 }
 .work-management-container .work-management .work-together__description {
   margin-bottom: 60px;
-  line-height: 1.1111111111rem;
+  line-height: 1.6666666667rem;
 }
 @media screen and (max-width: 1284px) {
   .work-management-container .work-management .project-management__image {
@@ -615,10 +621,10 @@ button {
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 500px;
-    height: 40px;
+    width: 550px;
+    height: 50px;
     bottom: 0;
-    left: 15%;
+    left: 8%;
     transform: translate(0, -15px);
   }
   .work-management-container .work-management .work-together__info {
@@ -646,10 +652,10 @@ button {
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 410px;
-    height: 80px;
+    width: 455px;
+    height: 90px;
     bottom: 0;
-    left: 25px;
+    left: 10px;
     transform: translate(0, 25px);
   }
   .work-management-container .work-management .work-together__info {
@@ -663,11 +669,11 @@ button {
   .work-management-container .work-management .project-management__title::after {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 80px;
+    width: 350px;
+    height: 70px;
     bottom: 0;
-    left: 5px;
-    transform: translate(0, 25px);
+    left: 20px;
+    transform: translate(0, 20px);
   }
   .work-management-container .work-management .project-management__image {
     width: 286px;
@@ -734,6 +740,7 @@ button {
   z-index: -1;
 }
 .extension-container .extension__description {
+  line-height: 1.6666666667rem;
   margin-bottom: 60px;
 }
 .extension-container .extension__image {
@@ -961,11 +968,14 @@ button {
   margin-bottom: 25px;
 }
 .pricing-container .pricing__card-name {
-  font-weight: 600;
   font-size: 1.3333333333rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: 0;
 }
 .pricing-container .pricing__card-description {
   font-weight: 500;
+  line-height: 1.2777777778rem;
 }
 .pricing-container .pricing__point-list {
   display: flex;
@@ -1039,6 +1049,7 @@ button {
 }
 .pricing__card--active .pricing__button {
   color: #ffffff;
+  line-height: auto;
   border: none;
 }
 
@@ -1183,6 +1194,7 @@ button {
 }
 .footer-container .footer__product-link {
   color: #ffffff;
+  line-height: 1.1111111111rem;
 }
 .footer-container .footer__resources {
   width: 205px;
@@ -1202,6 +1214,7 @@ button {
 }
 .footer-container .footer__resources-link {
   color: #ffffff;
+  line-height: 1.1111111111rem;
 }
 .footer-container .footer__company {
   width: 205px;
@@ -1222,6 +1235,7 @@ button {
 }
 .footer-container .footer__company-link {
   color: #ffffff;
+  line-height: 1.1111111111rem;
 }
 .footer-container .footer__try {
   max-width: 259px;
@@ -1232,6 +1246,7 @@ button {
 .footer-container .footer__try-description {
   margin-bottom: 23px;
   font-size: 0.8888888889rem;
+  line-height: 1.1111111111rem;
 }
 .footer-container .footer__try-button {
   font-size: 0.8888888889rem;
@@ -1277,6 +1292,7 @@ button {
 }
 .footer-container .footer__navigation-link {
   color: #ffffff;
+  line-height: 1.1111111111rem;
 }
 .footer-container .footer__icons {
   display: flex;
@@ -1386,6 +1402,12 @@ button {
     top: 50%;
     right: 20px;
     transform: translate(0, -5%);
+  }
+  .footer-container .footer__try {
+    text-align: center;
+  }
+  .footer-container .footer__try-button {
+    margin-inline: auto;
   }
   .footer-container .footer__icons {
     justify-content: center;

@@ -26,9 +26,9 @@ $line-height: 2rem;
 $line-height-nav: 1.277777777777778rem;
 $line-height-button: 1.277777777777778rem;
 
-$line-height-h1: 100%;
-$line-height-h2: 100%;
-$line-height-h4: 100%;
+$line-height-h1: auto;
+$line-height-h2: auto;
+$line-height-h4: auto;
 $line-height-h5: 2rem;
 
 $line-height-p1: $line-height;
@@ -37,7 +37,7 @@ $line-height-p3: 1.111111111111111rem;
 
 // letter spacing
 $letter-spacing: -0.02rem;
-$letter-spacing-nav: $letter-spacing;
+$letter-spacing-nav: 0;
 $letter-spacing-button: $letter-spacing;
 
 $letter-spacing-h1: $letter-spacing;
